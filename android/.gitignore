@@ -11,3 +11,4 @@ GeneratedPluginRegistrant.java
 key.properties
 
 /gradle-wrapper.properties
+/app/google-services.json
