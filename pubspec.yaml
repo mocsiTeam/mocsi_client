@@ -5,14 +5,14 @@ description: A new Flutter application.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.12.0-0 <3.0.0"
+  sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
   # UI
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.0
   # Firebase
   firebase_auth: ^0.18.4+1
   cloud_firestore: ^0.14.4
