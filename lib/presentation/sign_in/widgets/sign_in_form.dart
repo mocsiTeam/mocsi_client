@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mocsi_client/application/auth/sign_in_form/sign_in_form_bloc.dart';
 import 'package:mocsi_client/presentation/core/colors.dart';
+import 'package:mocsi_client/presentation/core/translation/i18n.dart';
 
 class SignInForm extends StatelessWidget {
   @override
@@ -74,9 +75,9 @@ class SignInForm extends StatelessWidget {
                           ),
                         ),
                         TextFormField(
-                          decoration: const InputDecoration(
-                            prefixIcon: Icon(Icons.email),
-                            labelText: 'Email',
+                          decoration: InputDecoration(
+                            prefixIcon: const Icon(Icons.email),
+                            labelText: I18n.eMail,
                           ),
                           autocorrect: false,
                           keyboardType: TextInputType.emailAddress,
@@ -98,9 +99,9 @@ class SignInForm extends StatelessWidget {
                         ),
                         const SizedBox(height: 8.0),
                         TextFormField(
-                          decoration: const InputDecoration(
-                            prefixIcon: Icon(Icons.lock),
-                            labelText: 'Password',
+                          decoration: InputDecoration(
+                            prefixIcon: const Icon(Icons.lock),
+                            labelText: I18n.password,
                           ),
                           autocorrect: false,
                           obscureText: true,
@@ -129,7 +130,7 @@ class SignInForm extends StatelessWidget {
                                       const SignInFormEvent
                                           .signInWithEmailAndPasswordPressed());
                                 },
-                                child: const Text('SIGN IN'),
+                                child: Text(I18n.signIn.toUpperCase()),
                               ),
                             ),
                             Expanded(
@@ -139,7 +140,7 @@ class SignInForm extends StatelessWidget {
                                       const SignInFormEvent
                                           .registerWithEmailAndPasswordPressed());
                                 },
-                                child: const Text('REGISTER'),
+                                child: Text(I18n.register.toUpperCase()),
                               ),
                             ),
                           ],
@@ -151,9 +152,9 @@ class SignInForm extends StatelessWidget {
                                     .signInWithGooglePressed());
                           },
                           color: primaryColor,
-                          child: const Text(
-                            'SIGN IN WITH GOOGLE',
-                            style: TextStyle(
+                          child: Text(
+                            I18n.signInWithGoogle,
+                            style: const TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                             ),
