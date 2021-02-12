@@ -13,9 +13,9 @@ class SplashPage extends StatelessWidget {
           initial: (_) {},
           authenticated: (_) {
             // TODO: add nav
-            print('I am authenticated!');
           },
-          unAuthenticated: (_) => ExtendedNavigator.root.replace(Routes.signInPage),
+          unAuthenticated: (_) =>
+              ExtendedNavigator.root.replace(Routes.signInPage),
         );
       },
       child: const Scaffold(
