@@ -3,7 +3,7 @@ mutation Login {
         input:
         {
             password: "test",
-            nickname: "test"
+            nickname: "test1"
         }
     ),
     {

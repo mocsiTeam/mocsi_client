@@ -2,9 +2,9 @@ mutation CreateUser {
     createUser(
         input:
         {
-            nickname: "test",
+            nickname: "test1",
             password: "test",
-            email: "email@mail.com",
+            email: "email1@mail.com",
             firstname: "Test",
             lastname: "Test",
         },
