@@ -1,0 +1,16 @@
+mutation CreateUser {
+    createUser(
+        input:
+        {
+            nickname: "test",
+            password: "test",
+            email: "email@mail.com",
+            firstname: "Test",
+            lastname: "Test",
+        },
+    )
+    {
+        accessToken
+        refreshToken
+    }
+}

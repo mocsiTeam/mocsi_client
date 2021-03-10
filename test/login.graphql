@@ -1,0 +1,13 @@
+mutation Login {
+    login(
+        input:
+        {
+            password: "test",
+            nickname: "test"
+        }
+    ),
+    {
+        accessToken
+        refreshToken
+    }
+}
