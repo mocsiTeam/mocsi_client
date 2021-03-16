@@ -10,3 +10,7 @@ analyzer:
     - lib/**/*.freezed.dart
     - lib/**/*.config.dart
     - lib/**/*.g.dart
+
+linter:
+  rules:
+    sort_pub_dependencies: false

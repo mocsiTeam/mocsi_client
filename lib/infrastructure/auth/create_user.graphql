@@ -1,0 +1,16 @@
+mutation CreateUser($nickname: String!, $password: String!, $email: String!, $firstname: String!, $lastname: String!) {
+    createUser(
+        input:
+        {
+            nickname: $nickname,
+            password: $password,
+            email: $email,
+            firstname: $firstname,
+            lastname: $lastname,
+        },
+    )
+    {
+        accessToken
+        refreshToken
+    }
+}

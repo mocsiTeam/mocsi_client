@@ -5,7 +5,7 @@
     "endpoints": {
       "Default": {
         "url": "https://www.jmteam.tk/graph-api",
-        "introspect": false
+        "introspect": true
       }
     }
   }
