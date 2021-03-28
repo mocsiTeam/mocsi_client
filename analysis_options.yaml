@@ -10,6 +10,7 @@ analyzer:
     - lib/**/*.freezed.dart
     - lib/**/*.config.dart
     - lib/**/*.g.dart
+    - lib/presentation/core/translation/i18n.dart
 
 linter:
   rules:

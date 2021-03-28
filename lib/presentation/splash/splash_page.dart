@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mocsi_client/application/auth/auth_bloc.dart';
-import 'package:mocsi_client/presentation/routes/router.gr.dart';
+import 'package:mocsi_client/presentation/routes/app_router.gr.dart';
 
 class SplashPage extends StatelessWidget {
   @override
@@ -15,7 +15,7 @@ class SplashPage extends StatelessWidget {
             // TODO: add nav
           },
           unAuthenticated: (_) =>
-              ExtendedNavigator.root.replace(Routes.signInPage),
+              context.router.replace(const SignInPageRoute()),
         );
       },
       child: const Scaffold(

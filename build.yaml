@@ -3,6 +3,7 @@ targets:
     sources:
       - lib/**
       - .graphqlconfig
+      - $package$
     builders:
       artemis:
         options:

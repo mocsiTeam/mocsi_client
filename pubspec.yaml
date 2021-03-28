@@ -5,7 +5,7 @@ description: A new Flutter application.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -16,11 +16,11 @@ dependencies:
   flushbar: ^1.10.4
   # Firebase
   firebase_auth: ^1.0.1
-  cloud_firestore: ^1.0.2
+  cloud_firestore: ^1.0.3
   firebase_core: ^1.0.2
   google_sign_in: ^5.0.1
   firebase_crashlytics: ^1.0.0
-  firebase_performance: ^0.6.0
+  firebase_performance: ^0.6.0+1
   # State management
   flutter_bloc: ^7.0.0
   # Tools
@@ -36,6 +36,7 @@ dependencies:
   kt_dart: ^0.9.0
   rxdart: ^0.26.0
   # Network
+  http_parser: ^4.0.0
   # Translation
   flutter_localizations:
     sdk: flutter
@@ -46,10 +47,10 @@ dependency_overrides:
   source_gen: ^1.0.0
   json_annotation: ^4.0.1
   glob: ^2.0.1
+  http_parser: ^4.0.0
   dart_style: ^2.0.0
   build: '>=2.0.0 <2.1.0'
   graphql: ^5.0.0-nullsafety.3
-  http_parser: '>=0.0.1 <4.0.0'
   http: ^0.13.1
   rxdart: ^0.26.0
   gql: '>=0.12.3 <1.0.0'
@@ -59,7 +60,10 @@ dependency_overrides:
   gql_dedupe_link: ^2.0.0-nullsafety.1
 
 dev_dependencies:
-  # flappy_translator: ^1.5.0
+  flappy_translator:
+    git:
+      url: https://github.com/smartnsoft/FlappyTranslator.git
+      ref: feature/null-safety
   lint: ^1.5.3
   # Auto-gen
   freezed: ^0.14.1+1
@@ -72,20 +76,20 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-#flappy_translator:
-#  input_file_path: "lib/presentation/core/translation/translation.csv"
-#  output_dir: "lib/presentation/core/translation"
-#  file_name: "i18n"
-#  class_name: "I18n"
-#  delimiter: ";"
-#  start_index: 1
-#  depend_on_context: false
-#  use_single_quotes: true
-#  replace_no_break_spaces: false
-#  expose_get_string: false
-#  expose_loca_strings: false
-#  expose_locale_maps: false
-#
+flappy_translator:
+  input_file_path: "lib/presentation/core/translation/translation.csv"
+  output_dir: "lib/presentation/core/translation"
+  file_name: "i18n"
+  class_name: "I18n"
+  delimiter: ";"
+  start_index: 1
+  depend_on_context: false
+  use_single_quotes: true
+  replace_no_break_spaces: false
+  expose_get_string: false
+  expose_loca_strings: false
+  expose_locale_maps: false
+
 
 
 

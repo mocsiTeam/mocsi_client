@@ -1,4 +1,3 @@
-import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mocsi_client/application/auth/sign_in_form/sign_in_form_bloc.dart';
@@ -14,15 +13,15 @@ class SignInForm extends StatelessWidget {
             () => {},
             (either) => either.fold(
                 (failure) => {
-                      FlushbarHelper.createError(
-                        message: failure.map(
-                          cancelledByUser: (_) => 'Cancelled',
-                          serverError: (_) => 'Server error',
-                          emailAlreadyInUse: (_) => 'Email already in use',
-                          invalidEmailAndPasswordCombination: (_) =>
-                              'Invalid email and password combination',
-                        ),
-                      ),
+                      // FlushbarHelper.createError(
+                      //   message: failure.map(
+                      //     cancelledByUser: (_) => 'Cancelled',
+                      //     serverError: (_) => 'Server error',
+                      //     emailAlreadyInUse: (_) => 'Email already in use',
+                      //     invalidEmailAndPasswordCombination: (_) =>
+                      //         'Invalid email and password combination',
+                      //   ),
+                      // ),
                     },
                 (_) => {
                       // TODO: add nav
@@ -57,7 +56,7 @@ class SignInForm extends StatelessWidget {
                                 '/klgtu/',
                                 style: Theme.of(context)
                                     .textTheme
-                                    .bodyText1
+                                    .bodyText1!
                                     .copyWith(color: primaryColor),
                               ),
                               const SizedBox(width: 6),
@@ -124,7 +123,7 @@ class SignInForm extends StatelessWidget {
                         Row(
                           children: [
                             Expanded(
-                              child: FlatButton(
+                              child: TextButton(
                                 onPressed: () {
                                   context.read<SignInFormBloc>().add(
                                       const SignInFormEvent
@@ -134,7 +133,7 @@ class SignInForm extends StatelessWidget {
                               ),
                             ),
                             Expanded(
-                              child: FlatButton(
+                              child: TextButton(
                                 onPressed: () {
                                   context.read<SignInFormBloc>().add(
                                       const SignInFormEvent
@@ -145,13 +144,12 @@ class SignInForm extends StatelessWidget {
                             ),
                           ],
                         ),
-                        RaisedButton(
+                        ElevatedButton(
                           onPressed: () {
                             context.read<SignInFormBloc>().add(
                                 const SignInFormEvent
                                     .signInWithGooglePressed());
                           },
-                          color: primaryColor,
                           child: Text(
                             I18n.signInWithGoogle,
                             style: const TextStyle(

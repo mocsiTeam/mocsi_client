@@ -1,4 +1,4 @@
-import 'package:auto_route/auto_route_annotations.dart';
+import 'package:auto_route/annotations.dart';
 import 'package:mocsi_client/presentation/sign_in/sign_in_page.dart';
 import 'package:mocsi_client/presentation/splash/splash_page.dart';
 
@@ -9,4 +9,4 @@ import 'package:mocsi_client/presentation/splash/splash_page.dart';
     MaterialRoute(page: SignInPage),
   ],
 )
-class $Router {}
+class $AppRouter {}
