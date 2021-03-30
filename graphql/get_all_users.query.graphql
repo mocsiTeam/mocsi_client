@@ -1,0 +1,10 @@
+query GetAllUsers {
+    getAllUsers{
+        email,
+        error,
+        firstname,
+        id,
+        lastname
+        role,
+    }
+}

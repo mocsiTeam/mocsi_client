@@ -1,10 +1,10 @@
 {
   "name": "Schema",
-  "schemaPath": "lib/infrastructure/core/my.schema.json",
+  "schemaPath": "my.schema.json",
   "extensions": {
     "endpoints": {
       "Default": {
-        "url": "https://www.jmteam.tk/graph-api",
+        "url": "https://www.jmteam.tk/graph-api/",
         "introspect": true
       }
     }
