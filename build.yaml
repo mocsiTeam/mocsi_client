@@ -2,13 +2,11 @@ targets:
   $default:
     sources:
       - lib/**
-      - graphql/**
-      - my.schema.graphql
       - $package$
     builders:
       artemis:
         options:
-          shema_mapping:
-          - schema: my.schema.graphql
-            queries_glob: graphql/**.graphql
-            output: lib/graphql/graphql_api.dart
+          schema_mapping:
+            - output: lib/infrastructure/core/graphql_api.dart
+              schema: lib/infrastructure/core/mocsi.schema.graphql
+              queries_glob: lib/infrastructure/auth/**.graphql

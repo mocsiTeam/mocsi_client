@@ -1,10 +1,10 @@
 {
   "name": "Schema",
-  "schemaPath": "my.schema.json",
+  "schemaPath": "lib/infrastructure/core/mocsi.schema.graphql",
   "extensions": {
     "endpoints": {
       "Default": {
-        "url": "https://www.jmteam.tk/graph-api/",
+        "url": "https://www.jmteam.tk/graph-api",
         "introspect": true
       }
     }

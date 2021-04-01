@@ -1,0 +1,6 @@
+query GetAuthUser {
+    getAuthUser{
+        email,
+        error
+    }
+}

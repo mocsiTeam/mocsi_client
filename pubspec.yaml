@@ -23,8 +23,9 @@ dependencies:
   firebase_performance: ^0.6.0+1
   # State management
   flutter_bloc: ^7.0.0
+  equatable: ^2.0.0
   # Tools
-  uuid: ^3.0.2
+  uuid: ^3.0.3
   json_annotation: ^4.0.1
   # Auto-gen
   freezed_annotation: ^0.14.1
@@ -36,30 +37,18 @@ dependencies:
   kt_dart: ^0.9.0
   rxdart: ^0.26.0
   # Network
-  http_parser: ^4.0.0
+  meta: '>=1.0.0 <2.0.0'
   # Translation
   flutter_localizations:
     sdk: flutter
 
 
-dependency_overrides:
-  yaml: ^3.1.0
-  source_gen: ^1.0.0
-  json_annotation: ^4.0.1
-  glob: ^2.0.1
-  http_parser: ^4.0.0
-  dart_style: ^2.0.0
-  build: '>=2.0.0 <2.1.0'
-  graphql: ^5.0.0-nullsafety.3
-  http: ^0.13.1
-  rxdart: ^0.26.0
-  gql: '>=0.12.3 <1.0.0'
-  gql_link: ^0.3.1-alpha
-  gql_http_link: ^0.3.2
-  gql_exec: ^0.3.0-nullsafety.1
-  gql_dedupe_link: ^2.0.0-nullsafety.1
 
 dev_dependencies:
+  artemis:
+    git:
+      url: https://github.com/glynskyi/artemis.git
+      ref: c769cb40a8ea0ab856da0c0e5fbdd8e368ed529b
   flappy_translator:
     git:
       url: https://github.com/smartnsoft/FlappyTranslator.git
@@ -70,9 +59,9 @@ dev_dependencies:
   injectable_generator: ^1.2.2
   auto_route_generator: ^1.0.2
   json_serializable: ^4.1.0
-  artemis: ^7.0.0-beta.1
   # build
   build_runner: ^1.12.2
+
   flutter_test:
     sdk: flutter
 

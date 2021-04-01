@@ -1,0 +1,118 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Group {
+    countUsers: Int!
+    editors: [User!]
+    error: String!
+    id: ID!
+    name: String!
+    owner: User!
+    users: [User!]
+}
+
+type Mutation {
+    addEditorsToGroup(input: UsersToGroup!): String!
+    addEditorsToRoom(input: UsersToRoom!): String!
+    addGroupToRoom(input: GroupsToRoom!): String!
+    addUsersToGroup(input: UsersToGroup!): String!
+    addUsersToRoom(input: UsersToRoom!): String!
+    createGroup(input: NewGroup!): Group!
+    createRoom(input: NewRoom!): Room!
+    createUser(input: NewUser!): Tokens!
+    deleteGroup(input: ID!): String!
+    deleteRoom(input: ID!): String!
+    kickEditorsFromRoom(input: UsersToRoom!): String!
+    kickGroupsFromRoom(input: GroupsToRoom!): String!
+    kickUsersFromGroup(input: UsersToGroup!): String!
+    kickUsersFromRoom(input: UsersToRoom!): String!
+    login(input: Login!): Tokens!
+    refreshToken(input: RefreshTokenInput!): String!
+}
+
+type Query {
+    getAllUsers: [User!]
+    getAuthUser: User!
+    getGroups(input: InfoGroups!): [Group!]
+    getMyGroups: [Group!]
+    getMyRooms: [Room!]
+    getRooms(input: [ID!]): [Room!]
+    getUsers(input: [String!]): [User!]
+}
+
+type Room {
+    editors: [User!]
+    error: String!
+    id: ID!
+    link: String!
+    name: String!
+    owner: User!
+    users: [User!]
+}
+
+type Tokens {
+    accessToken: String!
+    refreshToken: String!
+}
+
+type User {
+    email: String!
+    error: String!
+    firstname: String!
+    groups: [String!]!
+    id: ID!
+    lastname: String!
+    nickname: String!
+    role: String!
+}
+
+input GroupsToRoom {
+    groupsID: [ID!]
+    roomID: ID!
+}
+
+input InfoGroups {
+    groupsID: [String!]
+    isPrivate: Boolean!
+}
+
+input Login {
+    nickname: String!
+    password: String!
+}
+
+input NewGroup {
+    name: String!
+    private: Boolean!
+}
+
+input NewRoom {
+    name: String!
+    password: String!
+}
+
+input NewUser {
+    email: String!
+    firstname: String!
+    lastname: String!
+    nickname: String!
+    password: String!
+}
+
+input RefreshTokenInput {
+    token: String!
+}
+
+input UsersToGroup {
+    groupID: ID!
+    usersID: [ID!]
+}
+
+input UsersToRoom {
+    roomID: ID!
+    usersID: [ID!]
+}
