@@ -3,7 +3,7 @@ import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:meta/meta.dart';
-import 'package:mocsi_client/domain/auth/i_auth_facade.dart';
+import 'package:mocsi_client/domain/auth/authentication/i_auth_facade.dart';
 
 part 'auth_event.dart';
 part 'auth_state.dart';

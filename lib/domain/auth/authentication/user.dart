@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:mocsi_client/domain/auth/value_objects.dart';
+import 'package:mocsi_client/domain/auth/core/value_objects.dart';
 
 part 'user.freezed.dart';
 

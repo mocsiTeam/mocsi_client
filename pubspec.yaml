@@ -15,21 +15,22 @@ dependencies:
   cupertino_icons: ^1.0.2
   flushbar: ^1.10.4
   # Firebase
-  firebase_auth: ^1.0.1
-  cloud_firestore: ^1.0.3
-  firebase_core: ^1.0.2
-  google_sign_in: ^5.0.1
-  firebase_crashlytics: ^1.0.0
-  firebase_performance: ^0.6.0+1
+  firebase_auth: ^1.1.0
+  cloud_firestore: ^1.0.5
+  firebase_core: ^1.0.3
+  google_sign_in: ^5.0.2
+  firebase_crashlytics: ^2.0.0
+  firebase_performance: ^0.7.0
   # State management
   flutter_bloc: ^7.0.0
   equatable: ^2.0.0
   # Tools
-  uuid: ^3.0.3
+  uuid: ^3.0.4
   json_annotation: ^4.0.1
+  logger: ^1.0.0
   # Auto-gen
   freezed_annotation: ^0.14.1
-  get_it: ^6.0.0
+  get_it: ^6.1.1
   injectable: ^1.2.2
   auto_route: ^1.0.2
   # Functional programming
@@ -55,7 +56,7 @@ dev_dependencies:
       ref: feature/null-safety
   lint: ^1.5.3
   # Auto-gen
-  freezed: ^0.14.1+1
+  freezed: ^0.14.1+2
   injectable_generator: ^1.2.2
   auto_route_generator: ^1.0.2
   json_serializable: ^4.1.0

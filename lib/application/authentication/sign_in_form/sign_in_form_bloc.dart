@@ -6,9 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:meta/meta.dart';
-import 'package:mocsi_client/domain/auth/auth_failure.dart';
-import 'package:mocsi_client/domain/auth/i_auth_facade.dart';
-import 'package:mocsi_client/domain/auth/value_objects.dart';
+import 'package:mocsi_client/domain/auth/authentication/auth_failure.dart';
+import 'package:mocsi_client/domain/auth/authentication/i_auth_facade.dart';
+import 'package:mocsi_client/domain/auth/authorization/i_authorization_facade.dart';
+import 'package:mocsi_client/domain/auth/core/value_objects.dart';
 
 part 'sign_in_form_bloc.freezed.dart';
 part 'sign_in_form_event.dart';
@@ -17,8 +18,12 @@ part 'sign_in_form_state.dart';
 @injectable
 class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
   final IAuthFacade _authFacade;
+  final IAuthorizationFacade _authorizationFacade;
 
-  SignInFormBloc(this._authFacade) : super(SignInFormState.initial());
+  SignInFormBloc(
+    this._authFacade,
+    this._authorizationFacade,
+  ) : super(SignInFormState.initial());
 
   @override
   Stream<SignInFormState> mapEventToState(SignInFormEvent event) async* {

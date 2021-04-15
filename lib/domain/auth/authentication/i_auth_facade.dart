@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:mocsi_client/domain/auth/user.dart';
-import 'package:mocsi_client/domain/auth/value_objects.dart';
+import 'package:mocsi_client/domain/auth/authentication/user.dart';
+import 'package:mocsi_client/domain/auth/core/value_objects.dart';
 
 import 'auth_failure.dart';
 

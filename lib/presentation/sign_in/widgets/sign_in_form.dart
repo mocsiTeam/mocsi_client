@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mocsi_client/application/auth/sign_in_form/sign_in_form_bloc.dart';
+import 'package:mocsi_client/application/authentication/sign_in_form/sign_in_form_bloc.dart';
 import 'package:mocsi_client/presentation/core/colors.dart';
 import 'package:mocsi_client/presentation/core/translation/i18n.dart';
 

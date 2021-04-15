@@ -1,12 +1,12 @@
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
-import 'package:mocsi_client/domain/auth/auth_failure.dart';
+import 'package:mocsi_client/domain/auth/authentication/auth_failure.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:injectable/injectable.dart';
-import 'package:mocsi_client/domain/auth/i_auth_facade.dart';
-import 'package:mocsi_client/domain/auth/user.dart' as user;
-import 'package:mocsi_client/domain/auth/value_objects.dart';
+import 'package:mocsi_client/domain/auth/authentication/i_auth_facade.dart';
+import 'package:mocsi_client/domain/auth/authentication/user.dart' as user;
+import 'package:mocsi_client/domain/auth/core/value_objects.dart';
 
 import 'firebase_user_mapper.dart';
 
