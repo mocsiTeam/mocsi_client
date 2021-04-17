@@ -1,15 +1,30 @@
 ﻿keys;en;ru
 appTitle;Mocsi;Mocsi
+settings;Settings;Настройки
 login;Login;Логин
+invalidLogin;Invalid Login;Неверный логин
 password;Password;Пароль
+showPassword;Show Password;Показать пароль
+invalidPassword;Invalid Password;Неверный пароль
+shortPassword;Short Password;Короткий пароль
+nickName;Nickname;Логин
+invalidNickName;Invalid Nickame;Неверный логин
+name;Name;Имя
+invalidName;Invalid Name;Неверное имя
+surname;Surname;Фамилия
+invalidSurname;Invalid Surname;Неверная фамилия
 signIn;Sign in;Вход
-register;Register;Регистрация
 signInWithGoogle;Sign in with Google;Вход через Google
 proxySettings;Proxy settings;Настройка прокси
 domain;Domain;Домен
 url;URL;URL
 save;Save;Сохранить
 registration;Registration;Регистрация
+register;Register;Зарегистрировать
 eMail;E-mail;Электронная почта
-surname;Surname;Отчество
+invalidEMail;Invalid E-mail;Неверная электронная почта
 next;Next;Далее
+unexpectedError;Unexpected Error;Непредвиденная ошибка
+noConnectionError;Check your internet connection;Проверьте ваше интернет-соединение
+invalidEmailAndPasswordCombinationError;Invalid email and password combination;Неверная комбинация адреса электронной почты и пароля
+serverError;Server Error;Ошибка сервера

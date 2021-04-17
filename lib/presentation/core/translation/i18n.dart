@@ -9,13 +9,33 @@ import 'package:flutter/widgets.dart';
 class I18n {
   static String get appTitle => _getText('appTitle');
 
+  static String get settings => _getText('settings');
+
   static String get login => _getText('login');
+
+  static String get invalidLogin => _getText('invalidLogin');
 
   static String get password => _getText('password');
 
-  static String get signIn => _getText('signIn');
+  static String get showPassword => _getText('showPassword');
 
-  static String get register => _getText('register');
+  static String get invalidPassword => _getText('invalidPassword');
+
+  static String get shortPassword => _getText('shortPassword');
+
+  static String get nickName => _getText('nickName');
+
+  static String get invalidNickName => _getText('invalidNickName');
+
+  static String get name => _getText('name');
+
+  static String get invalidName => _getText('invalidName');
+
+  static String get surname => _getText('surname');
+
+  static String get invalidSurname => _getText('invalidSurname');
+
+  static String get signIn => _getText('signIn');
 
   static String get signInWithGoogle => _getText('signInWithGoogle');
 
@@ -29,46 +49,89 @@ class I18n {
 
   static String get registration => _getText('registration');
 
+  static String get register => _getText('register');
+
   static String get eMail => _getText('eMail');
 
-  static String get surname => _getText('surname');
+  static String get invalidEMail => _getText('invalidEMail');
 
   static String get next => _getText('next');
+
+  static String get unexpectedError => _getText('unexpectedError');
+
+  static String get noConnectionError => _getText('noConnectionError');
+
+  static String get invalidEmailAndPasswordCombinationError =>
+      _getText('invalidEmailAndPasswordCombinationError');
+
+  static String get serverError => _getText('serverError');
 
   static late Map<String, String> _localizedValues;
 
   static const _enValues = {
     'appTitle': 'Mocsi',
+    'settings': 'Settings',
     'login': 'Login',
+    'invalidLogin': 'Invalid Login',
     'password': 'Password',
+    'showPassword': 'Show Password',
+    'invalidPassword': 'Invalid Password',
+    'shortPassword': 'Short Password',
+    'nickName': 'Nickname',
+    'invalidNickName': 'Invalid Nickame',
+    'name': 'Name',
+    'invalidName': 'Invalid Name',
+    'surname': 'Surname',
+    'invalidSurname': 'Invalid Surname',
     'signIn': 'Sign in',
-    'register': 'Register',
     'signInWithGoogle': 'Sign in with Google',
     'proxySettings': 'Proxy settings',
     'domain': 'Domain',
     'url': 'URL',
     'save': 'Save',
     'registration': 'Registration',
+    'register': 'Register',
     'eMail': 'E-mail',
-    'surname': 'Surname',
+    'invalidEMail': 'Invalid E-mail',
     'next': 'Next',
+    'unexpectedError': 'Unexpected Error',
+    'noConnectionError': 'Check your internet connection',
+    'invalidEmailAndPasswordCombinationError':
+        'Invalid email and password combination',
+    'serverError': 'Server Error',
   };
 
   static const _ruValues = {
     'appTitle': 'Mocsi',
+    'settings': 'Настройки',
     'login': 'Логин',
+    'invalidLogin': 'Неверный логин',
     'password': 'Пароль',
+    'showPassword': 'Показать пароль',
+    'invalidPassword': 'Неверный пароль',
+    'shortPassword': 'Короткий пароль',
+    'nickName': 'Логин',
+    'invalidNickName': 'Неверный логин',
+    'name': 'Имя',
+    'invalidName': 'Неверное имя',
+    'surname': 'Фамилия',
+    'invalidSurname': 'Неверная фамилия',
     'signIn': 'Вход',
-    'register': 'Регистрация',
     'signInWithGoogle': 'Вход через Google',
     'proxySettings': 'Настройка прокси',
     'domain': 'Домен',
     'url': 'URL',
     'save': 'Сохранить',
     'registration': 'Регистрация',
+    'register': 'Зарегистрировать',
     'eMail': 'Электронная почта',
-    'surname': 'Отчество',
+    'invalidEMail': 'Неверная электронная почта',
     'next': 'Далее',
+    'unexpectedError': 'Непредвиденная ошибка',
+    'noConnectionError': 'Проверьте ваше интернет-соединение',
+    'invalidEmailAndPasswordCombinationError':
+        'Неверная комбинация адреса электронной почты и пароля',
+    'serverError': 'Ошибка сервера',
   };
 
   static const _allValues = {

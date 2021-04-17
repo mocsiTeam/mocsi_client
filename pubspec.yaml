@@ -2,7 +2,7 @@ name: mocsi_client
 description: A new Flutter application.
 
 
-version: 1.0.0+1
+version: 1.0.1+2
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -13,7 +13,7 @@ dependencies:
 
   # UI
   cupertino_icons: ^1.0.2
-  flushbar: ^1.10.4
+  another_flushbar: ^1.10.18
   # Firebase
   firebase_auth: ^1.1.0
   cloud_firestore: ^1.0.5
@@ -39,21 +39,20 @@ dependencies:
   rxdart: ^0.26.0
   # Network
   meta: '>=1.0.0 <2.0.0'
+  jitsi_meet: ^4.0.0
+  connectivity: ^3.0.3
   # Translation
   flutter_localizations:
     sdk: flutter
+  # Storage
+  flutter_secure_storage: ^4.1.0
+  shared_preferences: ^2.0.5
 
 
 
 dev_dependencies:
-  artemis:
-    git:
-      url: https://github.com/glynskyi/artemis.git
-      ref: c769cb40a8ea0ab856da0c0e5fbdd8e368ed529b
-  flappy_translator:
-    git:
-      url: https://github.com/smartnsoft/FlappyTranslator.git
-      ref: feature/null-safety
+  artemis: ^7.0.0-beta.3
+  flappy_translator: ^2.0.0-nullsafety.1
   lint: ^1.5.3
   # Auto-gen
   freezed: ^0.14.1+2

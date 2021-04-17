@@ -1,0 +1,8 @@
+mutation RefreshToken($token: String!) {
+    refreshToken(
+        input:
+        {
+            token: $token
+        }
+    )
+}

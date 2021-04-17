@@ -16,16 +16,20 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$AuthFailureTearOff {
   const _$AuthFailureTearOff();
 
-  CancelledByUser cancelledByUser() {
-    return const CancelledByUser();
+  UserDoesNotExist tokenDoesNotExist() {
+    return const UserDoesNotExist();
+  }
+
+  NoConnectionError noConnectionError() {
+    return const NoConnectionError();
   }
 
   ServerError serverError() {
     return const ServerError();
   }
 
-  EmailAlreadyInUse emailAlreadyInUse() {
-    return const EmailAlreadyInUse();
+  UnexpectedError unexpectedError() {
+    return const UnexpectedError();
   }
 
   InvalidEmailAndPasswordCombination invalidEmailAndPasswordCombination() {
@@ -40,35 +44,39 @@ const $AuthFailure = _$AuthFailureTearOff();
 mixin _$AuthFailure {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() cancelledByUser,
+    required TResult Function() tokenDoesNotExist,
+    required TResult Function() noConnectionError,
     required TResult Function() serverError,
-    required TResult Function() emailAlreadyInUse,
+    required TResult Function() unexpectedError,
     required TResult Function() invalidEmailAndPasswordCombination,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? cancelledByUser,
+    TResult Function()? tokenDoesNotExist,
+    TResult Function()? noConnectionError,
     TResult Function()? serverError,
-    TResult Function()? emailAlreadyInUse,
+    TResult Function()? unexpectedError,
     TResult Function()? invalidEmailAndPasswordCombination,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CancelledByUser value) cancelledByUser,
+    required TResult Function(UserDoesNotExist value) tokenDoesNotExist,
+    required TResult Function(NoConnectionError value) noConnectionError,
     required TResult Function(ServerError value) serverError,
-    required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
+    required TResult Function(UnexpectedError value) unexpectedError,
     required TResult Function(InvalidEmailAndPasswordCombination value)
         invalidEmailAndPasswordCombination,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(CancelledByUser value)? cancelledByUser,
+    TResult Function(UserDoesNotExist value)? tokenDoesNotExist,
+    TResult Function(NoConnectionError value)? noConnectionError,
     TResult Function(ServerError value)? serverError,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult Function(UnexpectedError value)? unexpectedError,
     TResult Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
     required TResult orElse(),
@@ -93,36 +101,36 @@ class _$AuthFailureCopyWithImpl<$Res> implements $AuthFailureCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $CancelledByUserCopyWith<$Res> {
-  factory $CancelledByUserCopyWith(
-          CancelledByUser value, $Res Function(CancelledByUser) then) =
-      _$CancelledByUserCopyWithImpl<$Res>;
+abstract class $UserDoesNotExistCopyWith<$Res> {
+  factory $UserDoesNotExistCopyWith(
+          UserDoesNotExist value, $Res Function(UserDoesNotExist) then) =
+      _$UserDoesNotExistCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$CancelledByUserCopyWithImpl<$Res>
+class _$UserDoesNotExistCopyWithImpl<$Res>
     extends _$AuthFailureCopyWithImpl<$Res>
-    implements $CancelledByUserCopyWith<$Res> {
-  _$CancelledByUserCopyWithImpl(
-      CancelledByUser _value, $Res Function(CancelledByUser) _then)
-      : super(_value, (v) => _then(v as CancelledByUser));
+    implements $UserDoesNotExistCopyWith<$Res> {
+  _$UserDoesNotExistCopyWithImpl(
+      UserDoesNotExist _value, $Res Function(UserDoesNotExist) _then)
+      : super(_value, (v) => _then(v as UserDoesNotExist));
 
   @override
-  CancelledByUser get _value => super._value as CancelledByUser;
+  UserDoesNotExist get _value => super._value as UserDoesNotExist;
 }
 
 /// @nodoc
-class _$CancelledByUser implements CancelledByUser {
-  const _$CancelledByUser();
+class _$UserDoesNotExist implements UserDoesNotExist {
+  const _$UserDoesNotExist();
 
   @override
   String toString() {
-    return 'AuthFailure.cancelledByUser()';
+    return 'AuthFailure.tokenDoesNotExist()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is CancelledByUser);
+    return identical(this, other) || (other is UserDoesNotExist);
   }
 
   @override
@@ -131,25 +139,27 @@ class _$CancelledByUser implements CancelledByUser {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() cancelledByUser,
+    required TResult Function() tokenDoesNotExist,
+    required TResult Function() noConnectionError,
     required TResult Function() serverError,
-    required TResult Function() emailAlreadyInUse,
+    required TResult Function() unexpectedError,
     required TResult Function() invalidEmailAndPasswordCombination,
   }) {
-    return cancelledByUser();
+    return tokenDoesNotExist();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? cancelledByUser,
+    TResult Function()? tokenDoesNotExist,
+    TResult Function()? noConnectionError,
     TResult Function()? serverError,
-    TResult Function()? emailAlreadyInUse,
+    TResult Function()? unexpectedError,
     TResult Function()? invalidEmailAndPasswordCombination,
     required TResult orElse(),
   }) {
-    if (cancelledByUser != null) {
-      return cancelledByUser();
+    if (tokenDoesNotExist != null) {
+      return tokenDoesNotExist();
     }
     return orElse();
   }
@@ -157,34 +167,135 @@ class _$CancelledByUser implements CancelledByUser {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CancelledByUser value) cancelledByUser,
+    required TResult Function(UserDoesNotExist value) tokenDoesNotExist,
+    required TResult Function(NoConnectionError value) noConnectionError,
     required TResult Function(ServerError value) serverError,
-    required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
+    required TResult Function(UnexpectedError value) unexpectedError,
     required TResult Function(InvalidEmailAndPasswordCombination value)
         invalidEmailAndPasswordCombination,
   }) {
-    return cancelledByUser(this);
+    return tokenDoesNotExist(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(CancelledByUser value)? cancelledByUser,
+    TResult Function(UserDoesNotExist value)? tokenDoesNotExist,
+    TResult Function(NoConnectionError value)? noConnectionError,
     TResult Function(ServerError value)? serverError,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult Function(UnexpectedError value)? unexpectedError,
     TResult Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
     required TResult orElse(),
   }) {
-    if (cancelledByUser != null) {
-      return cancelledByUser(this);
+    if (tokenDoesNotExist != null) {
+      return tokenDoesNotExist(this);
     }
     return orElse();
   }
 }
 
-abstract class CancelledByUser implements AuthFailure {
-  const factory CancelledByUser() = _$CancelledByUser;
+abstract class UserDoesNotExist implements AuthFailure {
+  const factory UserDoesNotExist() = _$UserDoesNotExist;
+}
+
+/// @nodoc
+abstract class $NoConnectionErrorCopyWith<$Res> {
+  factory $NoConnectionErrorCopyWith(
+          NoConnectionError value, $Res Function(NoConnectionError) then) =
+      _$NoConnectionErrorCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$NoConnectionErrorCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res>
+    implements $NoConnectionErrorCopyWith<$Res> {
+  _$NoConnectionErrorCopyWithImpl(
+      NoConnectionError _value, $Res Function(NoConnectionError) _then)
+      : super(_value, (v) => _then(v as NoConnectionError));
+
+  @override
+  NoConnectionError get _value => super._value as NoConnectionError;
+}
+
+/// @nodoc
+class _$NoConnectionError implements NoConnectionError {
+  const _$NoConnectionError();
+
+  @override
+  String toString() {
+    return 'AuthFailure.noConnectionError()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is NoConnectionError);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() tokenDoesNotExist,
+    required TResult Function() noConnectionError,
+    required TResult Function() serverError,
+    required TResult Function() unexpectedError,
+    required TResult Function() invalidEmailAndPasswordCombination,
+  }) {
+    return noConnectionError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? tokenDoesNotExist,
+    TResult Function()? noConnectionError,
+    TResult Function()? serverError,
+    TResult Function()? unexpectedError,
+    TResult Function()? invalidEmailAndPasswordCombination,
+    required TResult orElse(),
+  }) {
+    if (noConnectionError != null) {
+      return noConnectionError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(UserDoesNotExist value) tokenDoesNotExist,
+    required TResult Function(NoConnectionError value) noConnectionError,
+    required TResult Function(ServerError value) serverError,
+    required TResult Function(UnexpectedError value) unexpectedError,
+    required TResult Function(InvalidEmailAndPasswordCombination value)
+        invalidEmailAndPasswordCombination,
+  }) {
+    return noConnectionError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UserDoesNotExist value)? tokenDoesNotExist,
+    TResult Function(NoConnectionError value)? noConnectionError,
+    TResult Function(ServerError value)? serverError,
+    TResult Function(UnexpectedError value)? unexpectedError,
+    TResult Function(InvalidEmailAndPasswordCombination value)?
+        invalidEmailAndPasswordCombination,
+    required TResult orElse(),
+  }) {
+    if (noConnectionError != null) {
+      return noConnectionError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class NoConnectionError implements AuthFailure {
+  const factory NoConnectionError() = _$NoConnectionError;
 }
 
 /// @nodoc
@@ -225,9 +336,10 @@ class _$ServerError implements ServerError {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() cancelledByUser,
+    required TResult Function() tokenDoesNotExist,
+    required TResult Function() noConnectionError,
     required TResult Function() serverError,
-    required TResult Function() emailAlreadyInUse,
+    required TResult Function() unexpectedError,
     required TResult Function() invalidEmailAndPasswordCombination,
   }) {
     return serverError();
@@ -236,9 +348,10 @@ class _$ServerError implements ServerError {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? cancelledByUser,
+    TResult Function()? tokenDoesNotExist,
+    TResult Function()? noConnectionError,
     TResult Function()? serverError,
-    TResult Function()? emailAlreadyInUse,
+    TResult Function()? unexpectedError,
     TResult Function()? invalidEmailAndPasswordCombination,
     required TResult orElse(),
   }) {
@@ -251,9 +364,10 @@ class _$ServerError implements ServerError {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CancelledByUser value) cancelledByUser,
+    required TResult Function(UserDoesNotExist value) tokenDoesNotExist,
+    required TResult Function(NoConnectionError value) noConnectionError,
     required TResult Function(ServerError value) serverError,
-    required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
+    required TResult Function(UnexpectedError value) unexpectedError,
     required TResult Function(InvalidEmailAndPasswordCombination value)
         invalidEmailAndPasswordCombination,
   }) {
@@ -263,9 +377,10 @@ class _$ServerError implements ServerError {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(CancelledByUser value)? cancelledByUser,
+    TResult Function(UserDoesNotExist value)? tokenDoesNotExist,
+    TResult Function(NoConnectionError value)? noConnectionError,
     TResult Function(ServerError value)? serverError,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult Function(UnexpectedError value)? unexpectedError,
     TResult Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
     required TResult orElse(),
@@ -282,36 +397,36 @@ abstract class ServerError implements AuthFailure {
 }
 
 /// @nodoc
-abstract class $EmailAlreadyInUseCopyWith<$Res> {
-  factory $EmailAlreadyInUseCopyWith(
-          EmailAlreadyInUse value, $Res Function(EmailAlreadyInUse) then) =
-      _$EmailAlreadyInUseCopyWithImpl<$Res>;
+abstract class $UnexpectedErrorCopyWith<$Res> {
+  factory $UnexpectedErrorCopyWith(
+          UnexpectedError value, $Res Function(UnexpectedError) then) =
+      _$UnexpectedErrorCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$EmailAlreadyInUseCopyWithImpl<$Res>
+class _$UnexpectedErrorCopyWithImpl<$Res>
     extends _$AuthFailureCopyWithImpl<$Res>
-    implements $EmailAlreadyInUseCopyWith<$Res> {
-  _$EmailAlreadyInUseCopyWithImpl(
-      EmailAlreadyInUse _value, $Res Function(EmailAlreadyInUse) _then)
-      : super(_value, (v) => _then(v as EmailAlreadyInUse));
+    implements $UnexpectedErrorCopyWith<$Res> {
+  _$UnexpectedErrorCopyWithImpl(
+      UnexpectedError _value, $Res Function(UnexpectedError) _then)
+      : super(_value, (v) => _then(v as UnexpectedError));
 
   @override
-  EmailAlreadyInUse get _value => super._value as EmailAlreadyInUse;
+  UnexpectedError get _value => super._value as UnexpectedError;
 }
 
 /// @nodoc
-class _$EmailAlreadyInUse implements EmailAlreadyInUse {
-  const _$EmailAlreadyInUse();
+class _$UnexpectedError implements UnexpectedError {
+  const _$UnexpectedError();
 
   @override
   String toString() {
-    return 'AuthFailure.emailAlreadyInUse()';
+    return 'AuthFailure.unexpectedError()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is EmailAlreadyInUse);
+    return identical(this, other) || (other is UnexpectedError);
   }
 
   @override
@@ -320,25 +435,27 @@ class _$EmailAlreadyInUse implements EmailAlreadyInUse {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() cancelledByUser,
+    required TResult Function() tokenDoesNotExist,
+    required TResult Function() noConnectionError,
     required TResult Function() serverError,
-    required TResult Function() emailAlreadyInUse,
+    required TResult Function() unexpectedError,
     required TResult Function() invalidEmailAndPasswordCombination,
   }) {
-    return emailAlreadyInUse();
+    return unexpectedError();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? cancelledByUser,
+    TResult Function()? tokenDoesNotExist,
+    TResult Function()? noConnectionError,
     TResult Function()? serverError,
-    TResult Function()? emailAlreadyInUse,
+    TResult Function()? unexpectedError,
     TResult Function()? invalidEmailAndPasswordCombination,
     required TResult orElse(),
   }) {
-    if (emailAlreadyInUse != null) {
-      return emailAlreadyInUse();
+    if (unexpectedError != null) {
+      return unexpectedError();
     }
     return orElse();
   }
@@ -346,34 +463,36 @@ class _$EmailAlreadyInUse implements EmailAlreadyInUse {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CancelledByUser value) cancelledByUser,
+    required TResult Function(UserDoesNotExist value) tokenDoesNotExist,
+    required TResult Function(NoConnectionError value) noConnectionError,
     required TResult Function(ServerError value) serverError,
-    required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
+    required TResult Function(UnexpectedError value) unexpectedError,
     required TResult Function(InvalidEmailAndPasswordCombination value)
         invalidEmailAndPasswordCombination,
   }) {
-    return emailAlreadyInUse(this);
+    return unexpectedError(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(CancelledByUser value)? cancelledByUser,
+    TResult Function(UserDoesNotExist value)? tokenDoesNotExist,
+    TResult Function(NoConnectionError value)? noConnectionError,
     TResult Function(ServerError value)? serverError,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult Function(UnexpectedError value)? unexpectedError,
     TResult Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
     required TResult orElse(),
   }) {
-    if (emailAlreadyInUse != null) {
-      return emailAlreadyInUse(this);
+    if (unexpectedError != null) {
+      return unexpectedError(this);
     }
     return orElse();
   }
 }
 
-abstract class EmailAlreadyInUse implements AuthFailure {
-  const factory EmailAlreadyInUse() = _$EmailAlreadyInUse;
+abstract class UnexpectedError implements AuthFailure {
+  const factory UnexpectedError() = _$UnexpectedError;
 }
 
 /// @nodoc
@@ -420,9 +539,10 @@ class _$InvalidEmailAndPasswordCombination
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() cancelledByUser,
+    required TResult Function() tokenDoesNotExist,
+    required TResult Function() noConnectionError,
     required TResult Function() serverError,
-    required TResult Function() emailAlreadyInUse,
+    required TResult Function() unexpectedError,
     required TResult Function() invalidEmailAndPasswordCombination,
   }) {
     return invalidEmailAndPasswordCombination();
@@ -431,9 +551,10 @@ class _$InvalidEmailAndPasswordCombination
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? cancelledByUser,
+    TResult Function()? tokenDoesNotExist,
+    TResult Function()? noConnectionError,
     TResult Function()? serverError,
-    TResult Function()? emailAlreadyInUse,
+    TResult Function()? unexpectedError,
     TResult Function()? invalidEmailAndPasswordCombination,
     required TResult orElse(),
   }) {
@@ -446,9 +567,10 @@ class _$InvalidEmailAndPasswordCombination
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CancelledByUser value) cancelledByUser,
+    required TResult Function(UserDoesNotExist value) tokenDoesNotExist,
+    required TResult Function(NoConnectionError value) noConnectionError,
     required TResult Function(ServerError value) serverError,
-    required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
+    required TResult Function(UnexpectedError value) unexpectedError,
     required TResult Function(InvalidEmailAndPasswordCombination value)
         invalidEmailAndPasswordCombination,
   }) {
@@ -458,9 +580,10 @@ class _$InvalidEmailAndPasswordCombination
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(CancelledByUser value)? cancelledByUser,
+    TResult Function(UserDoesNotExist value)? tokenDoesNotExist,
+    TResult Function(NoConnectionError value)? noConnectionError,
     TResult Function(ServerError value)? serverError,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult Function(UnexpectedError value)? unexpectedError,
     TResult Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
     required TResult orElse(),

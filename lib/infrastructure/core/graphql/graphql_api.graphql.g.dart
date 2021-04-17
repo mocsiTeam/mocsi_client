@@ -1,4 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.12
 
 part of 'graphql_api.graphql.dart';
 
@@ -82,6 +83,17 @@ Map<String, dynamic> _$Login$MutationToJson(Login$Mutation instance) =>
       'login': instance.login.toJson(),
     };
 
+RefreshToken$Mutation _$RefreshToken$MutationFromJson(
+    Map<String, dynamic> json) {
+  return RefreshToken$Mutation()..refreshToken = json['refreshToken'] as String;
+}
+
+Map<String, dynamic> _$RefreshToken$MutationToJson(
+        RefreshToken$Mutation instance) =>
+    <String, dynamic>{
+      'refreshToken': instance.refreshToken,
+    };
+
 CreateUserArguments _$CreateUserArgumentsFromJson(Map<String, dynamic> json) {
   return CreateUserArguments(
     email: json['email'] as String,
@@ -113,4 +125,17 @@ Map<String, dynamic> _$LoginArgumentsToJson(LoginArguments instance) =>
     <String, dynamic>{
       'nickname': instance.nickname,
       'password': instance.password,
+    };
+
+RefreshTokenArguments _$RefreshTokenArgumentsFromJson(
+    Map<String, dynamic> json) {
+  return RefreshTokenArguments(
+    token: json['token'] as String,
+  );
+}
+
+Map<String, dynamic> _$RefreshTokenArgumentsToJson(
+        RefreshTokenArguments instance) =>
+    <String, dynamic>{
+      'token': instance.token,
     };

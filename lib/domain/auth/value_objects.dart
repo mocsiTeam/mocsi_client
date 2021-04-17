@@ -2,9 +2,9 @@ import 'package:dartz/dartz.dart';
 import 'package:mocsi_client/domain/core/failures.dart';
 import 'package:mocsi_client/domain/core/value_objects.dart';
 
-class AccessToken extends ValueObject {
+class AccessToken extends ValueObject<String> {
   @override
-  final Either<ValueFailure, dynamic> value;
+  final Either<ValueFailure<String>, String> value;
 
   factory AccessToken(String value) {
     return AccessToken._(
@@ -15,9 +15,9 @@ class AccessToken extends ValueObject {
   const AccessToken._(this.value);
 }
 
-class RefreshToken extends ValueObject {
+class RefreshToken extends ValueObject<String> {
   @override
-  final Either<ValueFailure, dynamic> value;
+  final Either<ValueFailure<String>, String> value;
 
   factory RefreshToken(String value) {
     return RefreshToken._(

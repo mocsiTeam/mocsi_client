@@ -1,6 +1,6 @@
 {
   "name": "Schema",
-  "schemaPath": "lib/infrastructure/core/mocsi.schema.graphql",
+  "schemaPath": "lib/infrastructure/core/graphql/mocsi.schema.graphql",
   "extensions": {
     "endpoints": {
       "Default": {

@@ -22,7 +22,7 @@ const ColorScheme mainColorScheme = ColorScheme(
   surface: surfaceColor,
   background: backgroundColor,
   error: redAccentColor,
-  onPrimary: primaryColor,
+  onPrimary: Colors.white,
   onSecondary: secondaryColor,
   onSurface: surfaceColor,
   onBackground: backgroundColor,

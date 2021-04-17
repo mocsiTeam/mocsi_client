@@ -41,7 +41,7 @@ android {
 
     defaultConfig {
         applicationId "com.mocsi_team.mocsi_client"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName

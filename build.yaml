@@ -7,6 +7,6 @@ targets:
       artemis:
         options:
           schema_mapping:
-            - output: lib/infrastructure/core/graphql_api.dart
-              schema: lib/infrastructure/core/mocsi.schema.graphql
+            - output: lib/infrastructure/core/graphql/graphql_api.dart
+              schema: lib/infrastructure/core/graphql/mocsi.schema.graphql
               queries_glob: lib/infrastructure/auth/**.graphql

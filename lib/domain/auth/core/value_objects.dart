@@ -3,7 +3,6 @@ import 'package:dartz/dartz.dart';
 import 'package:mocsi_client/domain/core/failures.dart';
 import 'package:mocsi_client/domain/core/value_objects.dart';
 import 'package:mocsi_client/domain/core/value_validators.dart';
-import 'package:uuid/uuid.dart';
 
 class EmailAddress extends ValueObject<String> {
   @override
@@ -35,17 +34,47 @@ class Password extends ValueObject<String> {
   });
 }
 
-class UniqueId extends ValueObject<String> {
+class NickName extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
 
-  factory UniqueId() {
-    return UniqueId._(
-      right(const Uuid().v1()),
+  factory NickName(String value) {
+    return NickName._(
+      value: validateName(value),
     );
   }
-  factory UniqueId.fromUniqueString(String uniqueId) {
-    return UniqueId._(right(uniqueId));
+
+  const NickName._({
+    required this.value,
+  });
+}
+
+class FirstName extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+
+  factory FirstName(String value) {
+    return FirstName._(
+      value: validateName(value),
+    );
   }
-  const UniqueId._(this.value);
+
+  const FirstName._({
+    required this.value,
+  });
+}
+
+class LastName extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+
+  factory LastName(String value) {
+    return LastName._(
+      value: validateName(value),
+    );
+  }
+
+  const LastName._({
+    required this.value,
+  });
 }
