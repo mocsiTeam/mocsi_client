@@ -6,6 +6,8 @@ const Color primaryLightColor = Color(0xff3D484D);
 const Color primaryLight2Color = Color(0xffCDCDCD);
 const Color primaryDarkColor = Color(0xff000A12);
 
+const Color unselectedColor = Color(0xffDADADA);
+
 const Color secondaryColor = Color(0xff63A4FF);
 const Color secondaryDarkColor = Color(0xff004BA0);
 

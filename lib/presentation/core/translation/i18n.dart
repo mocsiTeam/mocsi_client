@@ -66,6 +66,16 @@ class I18n {
 
   static String get serverError => _getText('serverError');
 
+  static String get rooms => _getText('rooms');
+
+  static String get createNewRoom => _getText('createNewRoom');
+
+  static String get creatingNewRoom => _getText('creatingNewRoom');
+
+  static String get profile => _getText('profile');
+
+  static String get calendar => _getText('calendar');
+
   static late Map<String, String> _localizedValues;
 
   static const _enValues = {
@@ -99,6 +109,11 @@ class I18n {
     'invalidEmailAndPasswordCombinationError':
         'Invalid email and password combination',
     'serverError': 'Server Error',
+    'rooms': 'Rooms',
+    'createNewRoom': 'Create new room',
+    'creatingNewRoom': 'Creating new room',
+    'profile': 'Profile',
+    'calendar': 'Calendar',
   };
 
   static const _ruValues = {
@@ -132,6 +147,11 @@ class I18n {
     'invalidEmailAndPasswordCombinationError':
         'Неверная комбинация адреса электронной почты и пароля',
     'serverError': 'Ошибка сервера',
+    'rooms': 'Комнаты',
+    'createNewRoom': 'Создать новую комнату',
+    'creatingNewRoom': 'Создание новой комнаты',
+    'profile': 'Профиль',
+    'calendar': 'Календарь',
   };
 
   static const _allValues = {

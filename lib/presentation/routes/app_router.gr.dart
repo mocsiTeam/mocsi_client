@@ -6,8 +6,12 @@
 
 import 'package:auto_route/auto_route.dart' as _i1;
 
+import '../calendar/calendar_tab.dart' as _i7;
 import '../home/home_page.dart' as _i5;
+import '../profile/profile_tab.dart' as _i9;
 import '../registration/registration_page.dart' as _i4;
+import '../rooms/create_room_page.dart' as _i6;
+import '../rooms/rooms_tab.dart' as _i8;
 import '../sign_in/sign_in_page.dart' as _i3;
 import '../splash/splash_page.dart' as _i2;
 
@@ -27,6 +31,19 @@ class AppRouter extends _i1.RootStackRouter {
     },
     HomePageRoute.name: (entry) {
       return _i1.MaterialPageX(entry: entry, child: _i5.HomePage());
+    },
+    CreateRoomPageRoute.name: (entry) {
+      return _i1.MaterialPageX(
+          entry: entry, child: _i6.CreateRoomPage(), fullscreenDialog: true);
+    },
+    Calendar.name: (entry) {
+      return _i1.MaterialPageX(entry: entry, child: _i7.CalendarTab());
+    },
+    Rooms.name: (entry) {
+      return _i1.MaterialPageX(entry: entry, child: _i8.RoomsTab());
+    },
+    Profile.name: (entry) {
+      return _i1.MaterialPageX(entry: entry, child: _i9.ProfileTab());
     }
   };
 
@@ -35,7 +52,15 @@ class AppRouter extends _i1.RootStackRouter {
         _i1.RouteConfig(SplashPageRoute.name, path: '/'),
         _i1.RouteConfig(SignInPageRoute.name, path: '/sign-in-page'),
         _i1.RouteConfig(RegistrationPageRoute.name, path: '/registration-page'),
-        _i1.RouteConfig(HomePageRoute.name, path: '/home-page')
+        _i1.RouteConfig(HomePageRoute.name,
+            path: 'home',
+            usesTabsRouter: true,
+            children: [
+              _i1.RouteConfig(Calendar.name, path: 'calendar'),
+              _i1.RouteConfig(Rooms.name, path: 'rooms'),
+              _i1.RouteConfig(Profile.name, path: 'profile')
+            ]),
+        _i1.RouteConfig(CreateRoomPageRoute.name, path: 'create')
       ];
 }
 
@@ -58,7 +83,32 @@ class RegistrationPageRoute extends _i1.PageRouteInfo {
 }
 
 class HomePageRoute extends _i1.PageRouteInfo {
-  const HomePageRoute() : super(name, path: '/home-page');
+  const HomePageRoute({List<_i1.PageRouteInfo>? children})
+      : super(name, path: 'home', initialChildren: children);
 
   static const String name = 'HomePageRoute';
+}
+
+class CreateRoomPageRoute extends _i1.PageRouteInfo {
+  const CreateRoomPageRoute() : super(name, path: 'create');
+
+  static const String name = 'CreateRoomPageRoute';
+}
+
+class Calendar extends _i1.PageRouteInfo {
+  const Calendar() : super(name, path: 'calendar');
+
+  static const String name = 'Calendar';
+}
+
+class Rooms extends _i1.PageRouteInfo {
+  const Rooms() : super(name, path: 'rooms');
+
+  static const String name = 'Rooms';
+}
+
+class Profile extends _i1.PageRouteInfo {
+  const Profile() : super(name, path: 'profile');
+
+  static const String name = 'Profile';
 }

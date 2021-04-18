@@ -35,7 +35,18 @@ class AppWidget extends StatelessWidget {
           accentColor: secondaryColor,
           buttonColor: primaryColor,
           colorScheme: mainColorScheme,
+          floatingActionButtonTheme:
+              ThemeData.light().floatingActionButtonTheme.copyWith(
+                    backgroundColor: secondaryDarkColor,
+                    foregroundColor: Colors.white,
+                  ),
           visualDensity: VisualDensity.adaptivePlatformDensity,
+          bottomNavigationBarTheme:
+              ThemeData.light().bottomNavigationBarTheme.copyWith(
+                    backgroundColor: primaryColor,
+                    selectedItemColor: Colors.white,
+                    unselectedItemColor: unselectedColor,
+                  ),
           buttonTheme: ThemeData.light()
               .buttonTheme
               .copyWith(colorScheme: mainColorScheme),
