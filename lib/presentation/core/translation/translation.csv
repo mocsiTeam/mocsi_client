@@ -28,3 +28,8 @@ unexpectedError;Unexpected Error;Непредвиденная ошибка
 noConnectionError;Check your internet connection;Проверьте ваше интернет-соединение
 invalidEmailAndPasswordCombinationError;Invalid email and password combination;Неверная комбинация адреса электронной почты и пароля
 serverError;Server Error;Ошибка сервера
+rooms;Rooms;Комнаты
+createNewRoom;Create new room;Создать новую комнату
+creatingNewRoom;Creating new room;Создание новой комнаты
+profile;Profile;Профиль
+calendar;Calendar;Календарь
