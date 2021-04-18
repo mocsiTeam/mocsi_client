@@ -1,0 +1,11 @@
+mutation CreateRoom ($name: String!, $password: String!) {
+    createRoom(
+        input: {
+            name: $name,
+            password: $password
+        }
+    ) {
+        link,
+        error
+    }
+}
