@@ -12,3 +12,4 @@ key.properties
 
 /gradle-wrapper.properties
 /app/google-services.json
+/app/proguard-rules.pro
