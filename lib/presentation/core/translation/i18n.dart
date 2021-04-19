@@ -72,6 +72,8 @@ class I18n {
 
   static String get creatingNewRoom => _getText('creatingNewRoom');
 
+  static String get roomCreated => _getText('roomCreated');
+
   static String get profile => _getText('profile');
 
   static String get calendar => _getText('calendar');
@@ -112,6 +114,7 @@ class I18n {
     'rooms': 'Rooms',
     'createNewRoom': 'Create new room',
     'creatingNewRoom': 'Creating new room',
+    'roomCreated': 'New room has been created',
     'profile': 'Profile',
     'calendar': 'Calendar',
   };
@@ -150,6 +153,7 @@ class I18n {
     'rooms': 'Комнаты',
     'createNewRoom': 'Создать новую комнату',
     'creatingNewRoom': 'Создание новой комнаты',
+    'roomCreated': 'Создана новая комната',
     'profile': 'Профиль',
     'calendar': 'Календарь',
   };

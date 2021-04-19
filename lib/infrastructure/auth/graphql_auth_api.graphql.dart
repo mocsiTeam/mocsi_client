@@ -6,7 +6,7 @@ import 'package:equatable/equatable.dart';
 import 'package:gql/ast.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-part 'graphql_api.graphql.g.dart';
+part 'graphql_auth_api.graphql.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 class CreateUser$Mutation$Tokens extends JsonSerializable with EquatableMixin {

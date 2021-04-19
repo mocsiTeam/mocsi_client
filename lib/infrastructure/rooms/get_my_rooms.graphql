@@ -1,16 +1,7 @@
 query GetMyRooms {
     getMyRooms {
-        editors {
-            firstname
-            lastname,
-            nickname,
-        },
         error,
         name,
-        owner {
-            firstname,
-            lastname,
-            nickname,
-        }
+        link,
     }
 }

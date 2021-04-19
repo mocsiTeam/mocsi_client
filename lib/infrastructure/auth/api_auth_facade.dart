@@ -1,17 +1,17 @@
+import 'package:artemis/artemis.dart';
 import 'package:connectivity/connectivity.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
-import 'package:artemis/artemis.dart';
 import 'package:mocsi_client/domain/auth/auth_failure.dart';
 import 'package:mocsi_client/domain/auth/core/value_objects.dart';
 import 'package:mocsi_client/domain/auth/i_auth_facade.dart';
 import 'package:mocsi_client/domain/auth/value_objects.dart';
+import 'package:mocsi_client/infrastructure/auth/graphql_auth_api.dart';
 import 'package:mocsi_client/infrastructure/core/api_injectable_module.dart';
 import 'package:mocsi_client/infrastructure/core/constants.dart';
-import 'package:mocsi_client/infrastructure/core/graphql/graphql_api.dart';
 import 'package:mocsi_client/presentation/injection.dart';
 
 @LazySingleton(as: IAuthFacade)
@@ -153,7 +153,7 @@ class ApiAuthFacade implements IAuthFacade {
   }
 
   @override
-  Future<Either<AuthFailure, Unit>> signIn() async {
+  Future<Either<AuthFailure, AccessToken>> signIn() async {
     try {
       final connectivityResult = await _connectivity.checkConnectivity();
       if (connectivityResult != ConnectivityResult.none) {
@@ -169,7 +169,7 @@ class ApiAuthFacade implements IAuthFacade {
           _logger.e(
               'signIn Response (GetAuthUserQuery). Has errors: ${result.errors}');
           if (!result.hasErrors) {
-            return right(unit);
+            return right(AccessToken(accessToken));
           } else if (result.errors!.first.message.contains('access denied')) {
             _logger
                 .i('signIn Response (GetAuthUserQuery). Error: token expired');
@@ -180,7 +180,7 @@ class ApiAuthFacade implements IAuthFacade {
               _logger.i(result);
               return result.fold(
                 (l) => left(l),
-                (_) => right(unit),
+                (accessToken) => right(accessToken),
               );
             } else {
               _logger.i('No token in storage');

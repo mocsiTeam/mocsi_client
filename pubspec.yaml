@@ -14,6 +14,7 @@ dependencies:
   # UI
   cupertino_icons: ^1.0.2
   another_flushbar: ^1.10.18
+  fluttertoast: ^8.0.4
   # Firebase
   firebase_auth: ^1.1.0
   cloud_firestore: ^1.0.5

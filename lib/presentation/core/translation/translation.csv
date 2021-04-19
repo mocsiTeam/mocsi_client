@@ -31,5 +31,6 @@ serverError;Server Error;Ошибка сервера
 rooms;Rooms;Комнаты
 createNewRoom;Create new room;Создать новую комнату
 creatingNewRoom;Creating new room;Создание новой комнаты
+roomCreated;New room has been created;Создана новая комната
 profile;Profile;Профиль
 calendar;Calendar;Календарь

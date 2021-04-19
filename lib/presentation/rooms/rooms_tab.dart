@@ -10,8 +10,6 @@ class RoomsTab extends StatelessWidget {
       body: Container(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          print(context.tabsRouter.current!.name);
-
           context.router.push(const CreateRoomPageRoute());
         },
         tooltip: I18n.createNewRoom,

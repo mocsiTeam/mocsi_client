@@ -1,2 +1,2 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-export 'graphql_api.graphql.dart';
+export 'graphql_rooms_api.graphql.dart';

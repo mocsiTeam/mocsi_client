@@ -35,11 +35,11 @@ abstract class IAuthFacade {
   Future<Either<AuthFailure, AccessToken>> refreshToken(
       RefreshToken refreshToken);
 
-  /// Checks if user has token or not
+  /// Checks if user has valid token or not
   ///
   /// If user has [AccessToken] and it's not expired,
-  /// auth flow ends.
-  Future<Either<AuthFailure, Unit>> signIn();
+  /// returns it.
+  Future<Either<AuthFailure, AccessToken>> signIn();
 
   /// Signs the user out
   ///

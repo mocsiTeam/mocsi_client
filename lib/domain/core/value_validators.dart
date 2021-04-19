@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+
 import 'failures.dart';
 
 Either<ValueFailure<String>, String> validateEmailAddress(String input) {
@@ -14,6 +15,14 @@ Either<ValueFailure<String>, String> validateEmailAddress(String input) {
 const int kPasswordMaxLength = 6;
 Either<ValueFailure<String>, String> validatePassword(String input) {
   if (input.length >= kPasswordMaxLength) {
+    return right(input);
+  } else {
+    return left(ValueFailure.shortPassword(failedValue: input));
+  }
+}
+
+Either<ValueFailure<String>, String> validateRoomPassword(String input) {
+  if (input.isEmpty || input.length >= kPasswordMaxLength) {
     return right(input);
   } else {
     return left(ValueFailure.shortPassword(failedValue: input));

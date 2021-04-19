@@ -5,7 +5,6 @@ mutation CreateRoom ($name: String!, $password: String!) {
             password: $password
         }
     ) {
-        link,
         error
     }
 }
