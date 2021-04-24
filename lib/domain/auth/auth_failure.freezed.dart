@@ -28,6 +28,10 @@ class _$AuthFailureTearOff {
     return const ServerError();
   }
 
+  UserAlreadyExists userAlreadyExists() {
+    return const UserAlreadyExists();
+  }
+
   UnexpectedError unexpectedError() {
     return const UnexpectedError();
   }
@@ -47,6 +51,7 @@ mixin _$AuthFailure {
     required TResult Function() tokenDoesNotExist,
     required TResult Function() noConnectionError,
     required TResult Function() serverError,
+    required TResult Function() userAlreadyExists,
     required TResult Function() unexpectedError,
     required TResult Function() invalidEmailAndPasswordCombination,
   }) =>
@@ -56,6 +61,7 @@ mixin _$AuthFailure {
     TResult Function()? tokenDoesNotExist,
     TResult Function()? noConnectionError,
     TResult Function()? serverError,
+    TResult Function()? userAlreadyExists,
     TResult Function()? unexpectedError,
     TResult Function()? invalidEmailAndPasswordCombination,
     required TResult orElse(),
@@ -66,6 +72,7 @@ mixin _$AuthFailure {
     required TResult Function(UserDoesNotExist value) tokenDoesNotExist,
     required TResult Function(NoConnectionError value) noConnectionError,
     required TResult Function(ServerError value) serverError,
+    required TResult Function(UserAlreadyExists value) userAlreadyExists,
     required TResult Function(UnexpectedError value) unexpectedError,
     required TResult Function(InvalidEmailAndPasswordCombination value)
         invalidEmailAndPasswordCombination,
@@ -76,6 +83,7 @@ mixin _$AuthFailure {
     TResult Function(UserDoesNotExist value)? tokenDoesNotExist,
     TResult Function(NoConnectionError value)? noConnectionError,
     TResult Function(ServerError value)? serverError,
+    TResult Function(UserAlreadyExists value)? userAlreadyExists,
     TResult Function(UnexpectedError value)? unexpectedError,
     TResult Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
@@ -142,6 +150,7 @@ class _$UserDoesNotExist implements UserDoesNotExist {
     required TResult Function() tokenDoesNotExist,
     required TResult Function() noConnectionError,
     required TResult Function() serverError,
+    required TResult Function() userAlreadyExists,
     required TResult Function() unexpectedError,
     required TResult Function() invalidEmailAndPasswordCombination,
   }) {
@@ -154,6 +163,7 @@ class _$UserDoesNotExist implements UserDoesNotExist {
     TResult Function()? tokenDoesNotExist,
     TResult Function()? noConnectionError,
     TResult Function()? serverError,
+    TResult Function()? userAlreadyExists,
     TResult Function()? unexpectedError,
     TResult Function()? invalidEmailAndPasswordCombination,
     required TResult orElse(),
@@ -170,6 +180,7 @@ class _$UserDoesNotExist implements UserDoesNotExist {
     required TResult Function(UserDoesNotExist value) tokenDoesNotExist,
     required TResult Function(NoConnectionError value) noConnectionError,
     required TResult Function(ServerError value) serverError,
+    required TResult Function(UserAlreadyExists value) userAlreadyExists,
     required TResult Function(UnexpectedError value) unexpectedError,
     required TResult Function(InvalidEmailAndPasswordCombination value)
         invalidEmailAndPasswordCombination,
@@ -183,6 +194,7 @@ class _$UserDoesNotExist implements UserDoesNotExist {
     TResult Function(UserDoesNotExist value)? tokenDoesNotExist,
     TResult Function(NoConnectionError value)? noConnectionError,
     TResult Function(ServerError value)? serverError,
+    TResult Function(UserAlreadyExists value)? userAlreadyExists,
     TResult Function(UnexpectedError value)? unexpectedError,
     TResult Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
@@ -241,6 +253,7 @@ class _$NoConnectionError implements NoConnectionError {
     required TResult Function() tokenDoesNotExist,
     required TResult Function() noConnectionError,
     required TResult Function() serverError,
+    required TResult Function() userAlreadyExists,
     required TResult Function() unexpectedError,
     required TResult Function() invalidEmailAndPasswordCombination,
   }) {
@@ -253,6 +266,7 @@ class _$NoConnectionError implements NoConnectionError {
     TResult Function()? tokenDoesNotExist,
     TResult Function()? noConnectionError,
     TResult Function()? serverError,
+    TResult Function()? userAlreadyExists,
     TResult Function()? unexpectedError,
     TResult Function()? invalidEmailAndPasswordCombination,
     required TResult orElse(),
@@ -269,6 +283,7 @@ class _$NoConnectionError implements NoConnectionError {
     required TResult Function(UserDoesNotExist value) tokenDoesNotExist,
     required TResult Function(NoConnectionError value) noConnectionError,
     required TResult Function(ServerError value) serverError,
+    required TResult Function(UserAlreadyExists value) userAlreadyExists,
     required TResult Function(UnexpectedError value) unexpectedError,
     required TResult Function(InvalidEmailAndPasswordCombination value)
         invalidEmailAndPasswordCombination,
@@ -282,6 +297,7 @@ class _$NoConnectionError implements NoConnectionError {
     TResult Function(UserDoesNotExist value)? tokenDoesNotExist,
     TResult Function(NoConnectionError value)? noConnectionError,
     TResult Function(ServerError value)? serverError,
+    TResult Function(UserAlreadyExists value)? userAlreadyExists,
     TResult Function(UnexpectedError value)? unexpectedError,
     TResult Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
@@ -339,6 +355,7 @@ class _$ServerError implements ServerError {
     required TResult Function() tokenDoesNotExist,
     required TResult Function() noConnectionError,
     required TResult Function() serverError,
+    required TResult Function() userAlreadyExists,
     required TResult Function() unexpectedError,
     required TResult Function() invalidEmailAndPasswordCombination,
   }) {
@@ -351,6 +368,7 @@ class _$ServerError implements ServerError {
     TResult Function()? tokenDoesNotExist,
     TResult Function()? noConnectionError,
     TResult Function()? serverError,
+    TResult Function()? userAlreadyExists,
     TResult Function()? unexpectedError,
     TResult Function()? invalidEmailAndPasswordCombination,
     required TResult orElse(),
@@ -367,6 +385,7 @@ class _$ServerError implements ServerError {
     required TResult Function(UserDoesNotExist value) tokenDoesNotExist,
     required TResult Function(NoConnectionError value) noConnectionError,
     required TResult Function(ServerError value) serverError,
+    required TResult Function(UserAlreadyExists value) userAlreadyExists,
     required TResult Function(UnexpectedError value) unexpectedError,
     required TResult Function(InvalidEmailAndPasswordCombination value)
         invalidEmailAndPasswordCombination,
@@ -380,6 +399,7 @@ class _$ServerError implements ServerError {
     TResult Function(UserDoesNotExist value)? tokenDoesNotExist,
     TResult Function(NoConnectionError value)? noConnectionError,
     TResult Function(ServerError value)? serverError,
+    TResult Function(UserAlreadyExists value)? userAlreadyExists,
     TResult Function(UnexpectedError value)? unexpectedError,
     TResult Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
@@ -394,6 +414,109 @@ class _$ServerError implements ServerError {
 
 abstract class ServerError implements AuthFailure {
   const factory ServerError() = _$ServerError;
+}
+
+/// @nodoc
+abstract class $UserAlreadyExistsCopyWith<$Res> {
+  factory $UserAlreadyExistsCopyWith(
+          UserAlreadyExists value, $Res Function(UserAlreadyExists) then) =
+      _$UserAlreadyExistsCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$UserAlreadyExistsCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res>
+    implements $UserAlreadyExistsCopyWith<$Res> {
+  _$UserAlreadyExistsCopyWithImpl(
+      UserAlreadyExists _value, $Res Function(UserAlreadyExists) _then)
+      : super(_value, (v) => _then(v as UserAlreadyExists));
+
+  @override
+  UserAlreadyExists get _value => super._value as UserAlreadyExists;
+}
+
+/// @nodoc
+class _$UserAlreadyExists implements UserAlreadyExists {
+  const _$UserAlreadyExists();
+
+  @override
+  String toString() {
+    return 'AuthFailure.userAlreadyExists()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is UserAlreadyExists);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() tokenDoesNotExist,
+    required TResult Function() noConnectionError,
+    required TResult Function() serverError,
+    required TResult Function() userAlreadyExists,
+    required TResult Function() unexpectedError,
+    required TResult Function() invalidEmailAndPasswordCombination,
+  }) {
+    return userAlreadyExists();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? tokenDoesNotExist,
+    TResult Function()? noConnectionError,
+    TResult Function()? serverError,
+    TResult Function()? userAlreadyExists,
+    TResult Function()? unexpectedError,
+    TResult Function()? invalidEmailAndPasswordCombination,
+    required TResult orElse(),
+  }) {
+    if (userAlreadyExists != null) {
+      return userAlreadyExists();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(UserDoesNotExist value) tokenDoesNotExist,
+    required TResult Function(NoConnectionError value) noConnectionError,
+    required TResult Function(ServerError value) serverError,
+    required TResult Function(UserAlreadyExists value) userAlreadyExists,
+    required TResult Function(UnexpectedError value) unexpectedError,
+    required TResult Function(InvalidEmailAndPasswordCombination value)
+        invalidEmailAndPasswordCombination,
+  }) {
+    return userAlreadyExists(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UserDoesNotExist value)? tokenDoesNotExist,
+    TResult Function(NoConnectionError value)? noConnectionError,
+    TResult Function(ServerError value)? serverError,
+    TResult Function(UserAlreadyExists value)? userAlreadyExists,
+    TResult Function(UnexpectedError value)? unexpectedError,
+    TResult Function(InvalidEmailAndPasswordCombination value)?
+        invalidEmailAndPasswordCombination,
+    required TResult orElse(),
+  }) {
+    if (userAlreadyExists != null) {
+      return userAlreadyExists(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UserAlreadyExists implements AuthFailure {
+  const factory UserAlreadyExists() = _$UserAlreadyExists;
 }
 
 /// @nodoc
@@ -438,6 +561,7 @@ class _$UnexpectedError implements UnexpectedError {
     required TResult Function() tokenDoesNotExist,
     required TResult Function() noConnectionError,
     required TResult Function() serverError,
+    required TResult Function() userAlreadyExists,
     required TResult Function() unexpectedError,
     required TResult Function() invalidEmailAndPasswordCombination,
   }) {
@@ -450,6 +574,7 @@ class _$UnexpectedError implements UnexpectedError {
     TResult Function()? tokenDoesNotExist,
     TResult Function()? noConnectionError,
     TResult Function()? serverError,
+    TResult Function()? userAlreadyExists,
     TResult Function()? unexpectedError,
     TResult Function()? invalidEmailAndPasswordCombination,
     required TResult orElse(),
@@ -466,6 +591,7 @@ class _$UnexpectedError implements UnexpectedError {
     required TResult Function(UserDoesNotExist value) tokenDoesNotExist,
     required TResult Function(NoConnectionError value) noConnectionError,
     required TResult Function(ServerError value) serverError,
+    required TResult Function(UserAlreadyExists value) userAlreadyExists,
     required TResult Function(UnexpectedError value) unexpectedError,
     required TResult Function(InvalidEmailAndPasswordCombination value)
         invalidEmailAndPasswordCombination,
@@ -479,6 +605,7 @@ class _$UnexpectedError implements UnexpectedError {
     TResult Function(UserDoesNotExist value)? tokenDoesNotExist,
     TResult Function(NoConnectionError value)? noConnectionError,
     TResult Function(ServerError value)? serverError,
+    TResult Function(UserAlreadyExists value)? userAlreadyExists,
     TResult Function(UnexpectedError value)? unexpectedError,
     TResult Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
@@ -542,6 +669,7 @@ class _$InvalidEmailAndPasswordCombination
     required TResult Function() tokenDoesNotExist,
     required TResult Function() noConnectionError,
     required TResult Function() serverError,
+    required TResult Function() userAlreadyExists,
     required TResult Function() unexpectedError,
     required TResult Function() invalidEmailAndPasswordCombination,
   }) {
@@ -554,6 +682,7 @@ class _$InvalidEmailAndPasswordCombination
     TResult Function()? tokenDoesNotExist,
     TResult Function()? noConnectionError,
     TResult Function()? serverError,
+    TResult Function()? userAlreadyExists,
     TResult Function()? unexpectedError,
     TResult Function()? invalidEmailAndPasswordCombination,
     required TResult orElse(),
@@ -570,6 +699,7 @@ class _$InvalidEmailAndPasswordCombination
     required TResult Function(UserDoesNotExist value) tokenDoesNotExist,
     required TResult Function(NoConnectionError value) noConnectionError,
     required TResult Function(ServerError value) serverError,
+    required TResult Function(UserAlreadyExists value) userAlreadyExists,
     required TResult Function(UnexpectedError value) unexpectedError,
     required TResult Function(InvalidEmailAndPasswordCombination value)
         invalidEmailAndPasswordCombination,
@@ -583,6 +713,7 @@ class _$InvalidEmailAndPasswordCombination
     TResult Function(UserDoesNotExist value)? tokenDoesNotExist,
     TResult Function(NoConnectionError value)? noConnectionError,
     TResult Function(ServerError value)? serverError,
+    TResult Function(UserAlreadyExists value)? userAlreadyExists,
     TResult Function(UnexpectedError value)? unexpectedError,
     TResult Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,

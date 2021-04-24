@@ -290,18 +290,18 @@ class GetAuthUserQuery
 
 @JsonSerializable(explicitToJson: true)
 class LoginArguments extends JsonSerializable with EquatableMixin {
-  LoginArguments({required this.nickname, required this.password});
+  LoginArguments({required this.email, required this.password});
 
   @override
   factory LoginArguments.fromJson(Map<String, dynamic> json) =>
       _$LoginArgumentsFromJson(json);
 
-  late String nickname;
+  late String email;
 
   late String password;
 
   @override
-  List<Object?> get props => [nickname, password];
+  List<Object?> get props => [email, password];
   @override
   Map<String, dynamic> toJson() => _$LoginArgumentsToJson(this);
 }
@@ -312,7 +312,7 @@ final LOGIN_MUTATION_DOCUMENT = DocumentNode(definitions: [
       name: NameNode(value: 'Login'),
       variableDefinitions: [
         VariableDefinitionNode(
-            variable: VariableNode(name: NameNode(value: 'nickname')),
+            variable: VariableNode(name: NameNode(value: 'email')),
             type:
                 NamedTypeNode(name: NameNode(value: 'String'), isNonNull: true),
             defaultValue: DefaultValueNode(value: null),
@@ -334,8 +334,8 @@ final LOGIN_MUTATION_DOCUMENT = DocumentNode(definitions: [
                   name: NameNode(value: 'input'),
                   value: ObjectValueNode(fields: [
                     ObjectFieldNode(
-                        name: NameNode(value: 'nickname'),
-                        value: VariableNode(name: NameNode(value: 'nickname'))),
+                        name: NameNode(value: 'email'),
+                        value: VariableNode(name: NameNode(value: 'email'))),
                     ObjectFieldNode(
                         name: NameNode(value: 'password'),
                         value: VariableNode(name: NameNode(value: 'password')))
@@ -413,12 +413,8 @@ final REFRESH_TOKEN_MUTATION_DOCUMENT = DocumentNode(definitions: [
             alias: null,
             arguments: [
               ArgumentNode(
-                  name: NameNode(value: 'input'),
-                  value: ObjectValueNode(fields: [
-                    ObjectFieldNode(
-                        name: NameNode(value: 'token'),
-                        value: VariableNode(name: NameNode(value: 'token')))
-                  ]))
+                  name: NameNode(value: 'token'),
+                  value: VariableNode(name: NameNode(value: 'token')))
             ],
             directives: [],
             selectionSet: null)

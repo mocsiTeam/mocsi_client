@@ -3,12 +3,16 @@
 schema {
     query: Query
     mutation: Mutation
+    subscription: Subscription
+}
+
+type Event {
+    message: String!
 }
 
 type Group {
     countUsers: Int!
     editors: [User!]
-    error: String!
     id: ID!
     name: String!
     owner: User!
@@ -21,17 +25,18 @@ type Mutation {
     addGroupToRoom(input: GroupsToRoom!): String!
     addUsersToGroup(input: UsersToGroup!): String!
     addUsersToRoom(input: UsersToRoom!): String!
+    createEvent(input: NewEvent): String!
     createGroup(input: NewGroup!): Group!
     createRoom(input: NewRoom!): Room!
     createUser(input: NewUser!): Tokens!
-    deleteGroup(input: ID!): String!
-    deleteRoom(input: ID!): String!
+    deleteGroup(id: ID!): String!
+    deleteRoom(id: ID!): String!
     kickEditorsFromRoom(input: UsersToRoom!): String!
     kickGroupsFromRoom(input: GroupsToRoom!): String!
     kickUsersFromGroup(input: UsersToGroup!): String!
     kickUsersFromRoom(input: UsersToRoom!): String!
     login(input: Login!): Tokens!
-    refreshToken(input: RefreshTokenInput!): String!
+    refreshToken(token: String!): String!
 }
 
 type Query {
@@ -40,18 +45,24 @@ type Query {
     getGroups(input: InfoGroups!): [Group!]
     getMyGroups: [Group!]
     getMyRooms: [Room!]
-    getRooms(input: [ID!]): [Room!]
-    getUsers(input: [String!]): [User!]
+    getRooms(id: [ID!]): [Room!]
+    getRoomsMonth(month: DateTime!): [Room!]
+    getUsers(nicknames: [String!]): [User!]
 }
 
 type Room {
     editors: [User!]
-    error: String!
     id: ID!
     link: String!
     name: String!
     owner: User!
+    unique_name: String!
     users: [User!]
+}
+
+type Subscription {
+    addedUsersToRoom(id: ID!): Room!
+    kickedUsersFromRoom(id: ID!): Room!
 }
 
 type Tokens {
@@ -81,8 +92,13 @@ input InfoGroups {
 }
 
 input Login {
-    nickname: String!
+    email: String!
     password: String!
+}
+
+input NewEvent {
+    datetime: DateTime!
+    idRoom: ID!
 }
 
 input NewGroup {
@@ -93,6 +109,7 @@ input NewGroup {
 input NewRoom {
     name: String!
     password: String!
+    unique_name: String!
 }
 
 input NewUser {
@@ -101,10 +118,6 @@ input NewUser {
     lastname: String!
     nickname: String!
     password: String!
-}
-
-input RefreshTokenInput {
-    token: String!
 }
 
 input UsersToGroup {
@@ -116,3 +129,6 @@ input UsersToRoom {
     roomID: ID!
     usersID: [ID!]
 }
+
+
+scalar DateTime

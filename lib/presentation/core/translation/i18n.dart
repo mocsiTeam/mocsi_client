@@ -64,6 +64,8 @@ class I18n {
   static String get invalidEmailAndPasswordCombinationError =>
       _getText('invalidEmailAndPasswordCombinationError');
 
+  static String get userAlreadyExists => _getText('userAlreadyExists');
+
   static String get serverError => _getText('serverError');
 
   static String get rooms => _getText('rooms');
@@ -110,6 +112,7 @@ class I18n {
     'noConnectionError': 'Check your internet connection',
     'invalidEmailAndPasswordCombinationError':
         'Invalid email and password combination',
+    'userAlreadyExists': 'User already exists',
     'serverError': 'Server Error',
     'rooms': 'Rooms',
     'createNewRoom': 'Create new room',
@@ -149,6 +152,7 @@ class I18n {
     'noConnectionError': 'Проверьте ваше интернет-соединение',
     'invalidEmailAndPasswordCombinationError':
         'Неверная комбинация адреса электронной почты и пароля',
+    'userAlreadyExists': 'Такой пользователь уже есть',
     'serverError': 'Ошибка сервера',
     'rooms': 'Комнаты',
     'createNewRoom': 'Создать новую комнату',

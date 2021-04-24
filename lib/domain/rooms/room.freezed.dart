@@ -18,10 +18,12 @@ class _$RoomTearOff {
 
   _Room call(
       {required ConferenceUrl url,
+      required UniqueId uniqueName,
       required Name name,
       required Password password}) {
     return _Room(
       url: url,
+      uniqueName: uniqueName,
       name: name,
       password: password,
     );
@@ -34,6 +36,7 @@ const $Room = _$RoomTearOff();
 /// @nodoc
 mixin _$Room {
   ConferenceUrl get url => throw _privateConstructorUsedError;
+  UniqueId get uniqueName => throw _privateConstructorUsedError;
   Name get name => throw _privateConstructorUsedError;
   Password get password => throw _privateConstructorUsedError;
 
@@ -45,7 +48,8 @@ mixin _$Room {
 abstract class $RoomCopyWith<$Res> {
   factory $RoomCopyWith(Room value, $Res Function(Room) then) =
       _$RoomCopyWithImpl<$Res>;
-  $Res call({ConferenceUrl url, Name name, Password password});
+  $Res call(
+      {ConferenceUrl url, UniqueId uniqueName, Name name, Password password});
 }
 
 /// @nodoc
@@ -59,6 +63,7 @@ class _$RoomCopyWithImpl<$Res> implements $RoomCopyWith<$Res> {
   @override
   $Res call({
     Object? url = freezed,
+    Object? uniqueName = freezed,
     Object? name = freezed,
     Object? password = freezed,
   }) {
@@ -67,6 +72,10 @@ class _$RoomCopyWithImpl<$Res> implements $RoomCopyWith<$Res> {
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as ConferenceUrl,
+      uniqueName: uniqueName == freezed
+          ? _value.uniqueName
+          : uniqueName // ignore: cast_nullable_to_non_nullable
+              as UniqueId,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -84,7 +93,8 @@ abstract class _$RoomCopyWith<$Res> implements $RoomCopyWith<$Res> {
   factory _$RoomCopyWith(_Room value, $Res Function(_Room) then) =
       __$RoomCopyWithImpl<$Res>;
   @override
-  $Res call({ConferenceUrl url, Name name, Password password});
+  $Res call(
+      {ConferenceUrl url, UniqueId uniqueName, Name name, Password password});
 }
 
 /// @nodoc
@@ -99,6 +109,7 @@ class __$RoomCopyWithImpl<$Res> extends _$RoomCopyWithImpl<$Res>
   @override
   $Res call({
     Object? url = freezed,
+    Object? uniqueName = freezed,
     Object? name = freezed,
     Object? password = freezed,
   }) {
@@ -107,6 +118,10 @@ class __$RoomCopyWithImpl<$Res> extends _$RoomCopyWithImpl<$Res>
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as ConferenceUrl,
+      uniqueName: uniqueName == freezed
+          ? _value.uniqueName
+          : uniqueName // ignore: cast_nullable_to_non_nullable
+              as UniqueId,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -121,11 +136,17 @@ class __$RoomCopyWithImpl<$Res> extends _$RoomCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_Room extends _Room {
-  const _$_Room({required this.url, required this.name, required this.password})
+  const _$_Room(
+      {required this.url,
+      required this.uniqueName,
+      required this.name,
+      required this.password})
       : super._();
 
   @override
   final ConferenceUrl url;
+  @override
+  final UniqueId uniqueName;
   @override
   final Name name;
   @override
@@ -133,7 +154,7 @@ class _$_Room extends _Room {
 
   @override
   String toString() {
-    return 'Room(url: $url, name: $name, password: $password)';
+    return 'Room(url: $url, uniqueName: $uniqueName, name: $name, password: $password)';
   }
 
   @override
@@ -142,6 +163,9 @@ class _$_Room extends _Room {
         (other is _Room &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
+            (identical(other.uniqueName, uniqueName) ||
+                const DeepCollectionEquality()
+                    .equals(other.uniqueName, uniqueName)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.password, password) ||
@@ -153,6 +177,7 @@ class _$_Room extends _Room {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(url) ^
+      const DeepCollectionEquality().hash(uniqueName) ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(password);
 
@@ -165,12 +190,15 @@ class _$_Room extends _Room {
 abstract class _Room extends Room {
   const factory _Room(
       {required ConferenceUrl url,
+      required UniqueId uniqueName,
       required Name name,
       required Password password}) = _$_Room;
   const _Room._() : super._();
 
   @override
   ConferenceUrl get url => throw _privateConstructorUsedError;
+  @override
+  UniqueId get uniqueName => throw _privateConstructorUsedError;
   @override
   Name get name => throw _privateConstructorUsedError;
   @override

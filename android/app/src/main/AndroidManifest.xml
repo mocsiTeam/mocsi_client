@@ -9,8 +9,8 @@
     <application
         tools:replace="android:label"
         android:name="io.flutter.app.FlutterApplication"
-        android:label="mocsi_client"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launcher_icon"
+        android:label="Mocsi">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

@@ -1,10 +1,10 @@
 import 'package:another_flushbar/flushbar_helper.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mocsi_client/application/auth/registration_form/registration_form_bloc.dart';
-import 'package:mocsi_client/presentation/routes/app_router.gr.dart';
 import 'package:mocsi_client/presentation/core/translation/i18n.dart';
-import 'package:auto_route/auto_route.dart';
+import 'package:mocsi_client/presentation/routes/app_router.gr.dart';
 
 class RegistrationForm extends StatelessWidget {
   @override
@@ -21,6 +21,7 @@ class RegistrationForm extends StatelessWidget {
                         noConnectionError: (_) => I18n.noConnectionError,
                         serverError: (_) => I18n.serverError,
                         unexpectedError: (_) => I18n.unexpectedError,
+                        userAlreadyExists: (_) => I18n.userAlreadyExists,
                         invalidEmailAndPasswordCombination: (_) =>
                             I18n.invalidEmailAndPasswordCombinationError,
                       )).show(context)

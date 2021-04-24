@@ -53,17 +53,40 @@ class ApiAuthFacade implements IAuthFacade {
       )));
       if (!result.hasErrors) {
         _logger.i('User registered successfully');
-        _logger.i(result.data!.createUser.refreshToken);
-        _logger.i(result.data!.createUser.accessToken);
 
-        final loginResult = await login(
-          emailAddress: emailAddress,
-          password: password,
+        final accessTokenStr = result.data!.createUser.accessToken;
+        _logger.i('Saving AccessToken: $accessTokenStr');
+        await _secureStorage.write(
+          key: kAccessToken,
+          value: accessTokenStr,
         );
 
-        return loginResult;
+        final refreshTokenStr = result.data!.createUser.refreshToken;
+        _logger.i('Saving RefreshToken: $refreshTokenStr');
+        await _secureStorage.write(
+          key: kRefreshToken,
+          value: refreshTokenStr,
+        );
+
+        final client = getIt<ArtemisClient>(param1: accessTokenStr);
+
+        final testResult = await client.execute(GetAuthUserQuery());
+        if (testResult.hasErrors) {
+          _logger.i(testResult.data!.getAuthUser.email);
+          return right(unit);
+        } else {
+          for (final error in testResult.errors!) {
+            _logger.e(error.message);
+          }
+          return left(const AuthFailure.unexpectedError());
+        }
       } else {
-        _logger.e(result.errors);
+        for (final error in result.errors!) {
+          _logger.e('${error.message} ${error.extensions}');
+          if (error.message.contains('already exists')) {
+            return left(const AuthFailure.userAlreadyExists());
+          }
+        }
         return left(const AuthFailure.serverError());
       }
     } else {
@@ -84,7 +107,7 @@ class ApiAuthFacade implements IAuthFacade {
         final passwordStr = password.getOrCrash();
         final result = await client.execute(LoginMutation(
             variables: LoginArguments(
-          nickname: emailAddressStr,
+          email: emailAddressStr,
           password: passwordStr,
         )));
         if (!result.hasErrors) {
@@ -160,6 +183,7 @@ class ApiAuthFacade implements IAuthFacade {
         final accessToken = await _secureStorage.read(key: kAccessToken);
         _logger.i('Secure storage: $accessToken');
         if (accessToken != null) {
+          _logger.v(accessToken);
           final clientWithAccessToken =
               getIt<ArtemisClient>(param1: accessToken);
           final result =
@@ -179,8 +203,15 @@ class ApiAuthFacade implements IAuthFacade {
               final result = await refreshToken(RefreshToken(refreshTokenStr));
               _logger.i(result);
               return result.fold(
-                (l) => left(l),
-                (accessToken) => right(accessToken),
+                (l) {
+                  _logger.v(l.toString());
+                  return left(l);
+                },
+                (accessToken) {
+                  _logger.v(accessToken);
+                  _logger.v(accessToken.getOrCrash());
+                  return right(AccessToken(accessToken.getOrCrash()));
+                },
               );
             } else {
               _logger.i('No token in storage');
@@ -202,6 +233,17 @@ class ApiAuthFacade implements IAuthFacade {
     } on PlatformException catch (e) {
       _logger.e(e.toString());
       return left(const AuthFailure.unexpectedError());
+    } on Exception catch (e) {
+      _logger.e(e.toString());
+      final _refreshToken = await _secureStorage.read(key: kRefreshToken);
+      final failureOrAccessToken =
+          await refreshToken(RefreshToken(_refreshToken!));
+
+      return await failureOrAccessToken.fold((failure) => left(failure),
+          (accessToken) async {
+        final failureOrSignedIn = await signIn();
+        return failureOrSignedIn;
+      });
     }
   }
 

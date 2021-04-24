@@ -7,6 +7,7 @@ class AuthFailure with _$AuthFailure {
   const factory AuthFailure.tokenDoesNotExist() = UserDoesNotExist;
   const factory AuthFailure.noConnectionError() = NoConnectionError;
   const factory AuthFailure.serverError() = ServerError;
+  const factory AuthFailure.userAlreadyExists() = UserAlreadyExists;
   const factory AuthFailure.unexpectedError() = UnexpectedError;
   const factory AuthFailure.invalidEmailAndPasswordCombination() =
       InvalidEmailAndPasswordCombination;

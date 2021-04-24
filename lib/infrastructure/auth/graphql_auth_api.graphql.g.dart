@@ -116,14 +116,14 @@ Map<String, dynamic> _$CreateUserArgumentsToJson(
 
 LoginArguments _$LoginArgumentsFromJson(Map<String, dynamic> json) {
   return LoginArguments(
-    nickname: json['nickname'] as String,
+    email: json['email'] as String,
     password: json['password'] as String,
   );
 }
 
 Map<String, dynamic> _$LoginArgumentsToJson(LoginArguments instance) =>
     <String, dynamic>{
-      'nickname': instance.nickname,
+      'email': instance.email,
       'password': instance.password,
     };
 

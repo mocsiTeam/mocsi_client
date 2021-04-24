@@ -15,10 +15,10 @@ class CreateRoom$Mutation$Room extends JsonSerializable with EquatableMixin {
   factory CreateRoom$Mutation$Room.fromJson(Map<String, dynamic> json) =>
       _$CreateRoom$Mutation$RoomFromJson(json);
 
-  late String error;
+  late String link;
 
   @override
-  List<Object?> get props => [error];
+  List<Object?> get props => [link];
   Map<String, dynamic> toJson() => _$CreateRoom$Mutation$RoomToJson(this);
 }
 
@@ -43,14 +43,12 @@ class GetMyRooms$Query$Room extends JsonSerializable with EquatableMixin {
   factory GetMyRooms$Query$Room.fromJson(Map<String, dynamic> json) =>
       _$GetMyRooms$Query$RoomFromJson(json);
 
-  late String error;
-
   late String name;
 
   late String link;
 
   @override
-  List<Object?> get props => [error, name, link];
+  List<Object?> get props => [name, link];
   Map<String, dynamic> toJson() => _$GetMyRooms$Query$RoomToJson(this);
 }
 
@@ -70,7 +68,8 @@ class GetMyRooms$Query extends JsonSerializable with EquatableMixin {
 
 @JsonSerializable(explicitToJson: true)
 class CreateRoomArguments extends JsonSerializable with EquatableMixin {
-  CreateRoomArguments({required this.name, required this.password});
+  CreateRoomArguments(
+      {required this.name, required this.password, required this.uniqueName});
 
   @override
   factory CreateRoomArguments.fromJson(Map<String, dynamic> json) =>
@@ -80,8 +79,10 @@ class CreateRoomArguments extends JsonSerializable with EquatableMixin {
 
   late String password;
 
+  late String uniqueName;
+
   @override
-  List<Object?> get props => [name, password];
+  List<Object?> get props => [name, password, uniqueName];
   @override
   Map<String, dynamic> toJson() => _$CreateRoomArgumentsToJson(this);
 }
@@ -102,6 +103,12 @@ final CREATE_ROOM_MUTATION_DOCUMENT = DocumentNode(definitions: [
             type:
                 NamedTypeNode(name: NameNode(value: 'String'), isNonNull: true),
             defaultValue: DefaultValueNode(value: null),
+            directives: []),
+        VariableDefinitionNode(
+            variable: VariableNode(name: NameNode(value: 'uniqueName')),
+            type:
+                NamedTypeNode(name: NameNode(value: 'String'), isNonNull: true),
+            defaultValue: DefaultValueNode(value: null),
             directives: [])
       ],
       directives: [],
@@ -118,13 +125,17 @@ final CREATE_ROOM_MUTATION_DOCUMENT = DocumentNode(definitions: [
                         value: VariableNode(name: NameNode(value: 'name'))),
                     ObjectFieldNode(
                         name: NameNode(value: 'password'),
-                        value: VariableNode(name: NameNode(value: 'password')))
+                        value: VariableNode(name: NameNode(value: 'password'))),
+                    ObjectFieldNode(
+                        name: NameNode(value: 'unique_name'),
+                        value:
+                            VariableNode(name: NameNode(value: 'uniqueName')))
                   ]))
             ],
             directives: [],
             selectionSet: SelectionSetNode(selections: [
               FieldNode(
-                  name: NameNode(value: 'error'),
+                  name: NameNode(value: 'link'),
                   alias: null,
                   arguments: [],
                   directives: [],
@@ -166,12 +177,6 @@ final GET_MY_ROOMS_QUERY_DOCUMENT = DocumentNode(definitions: [
             arguments: [],
             directives: [],
             selectionSet: SelectionSetNode(selections: [
-              FieldNode(
-                  name: NameNode(value: 'error'),
-                  alias: null,
-                  arguments: [],
-                  directives: [],
-                  selectionSet: null),
               FieldNode(
                   name: NameNode(value: 'name'),
                   alias: null,

@@ -22,6 +22,8 @@ class RoomsRepository implements IRoomsRepository {
   @override
   Future<Either<RoomsFailure, KtList<Room>>> getRooms(
       AccessToken accessToken) async {
+    _logger.v(accessToken);
+    _logger.v(accessToken.getOrCrash());
     final clientWithAccessToken =
         getIt<ArtemisClient>(param1: accessToken.getOrCrash());
     final result = await clientWithAccessToken.execute(GetMyRoomsQuery());
@@ -35,6 +37,7 @@ class RoomsRepository implements IRoomsRepository {
                 url: ConferenceUrl.fromUrl(element.link),
                 name: Name(element.name),
                 password: Password(''),
+                uniqueName: UniqueId(),
               ),
             )
             .toImmutableList();
@@ -42,7 +45,9 @@ class RoomsRepository implements IRoomsRepository {
         return right(list);
       }
     } else {
-      _logger.e(result.errors);
+      for (final error in result.errors!) {
+        _logger.e('${error.message} ${error.extensions}');
+      }
       return left(const RoomsFailure.serverError());
     }
   }
@@ -57,12 +62,14 @@ class RoomsRepository implements IRoomsRepository {
         variables: CreateRoomArguments(
       name: room.name.getOrCrash(),
       password: room.password.getOrCrash(),
+      uniqueName: room.uniqueName.getOrCrash(),
     )));
     if (!result.hasErrors) {
-      if (result.data!.createRoom.error.isEmpty) {
+      if (result.data!.createRoom.link.isNotEmpty) {
+        _logger.i(result.data!.createRoom.link);
         return right(unit);
       } else {
-        _logger.e(result.data!.createRoom.error);
+        _logger.i('Link is empty');
         return left(const RoomsFailure.serverError());
       }
     } else {

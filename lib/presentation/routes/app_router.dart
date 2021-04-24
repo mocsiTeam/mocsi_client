@@ -1,6 +1,7 @@
 import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:mocsi_client/presentation/calendar/calendar_tab.dart';
+import 'package:mocsi_client/presentation/conference/conference_page.dart';
 import 'package:mocsi_client/presentation/home/home_page.dart';
 import 'package:mocsi_client/presentation/profile/profile_tab.dart';
 import 'package:mocsi_client/presentation/registration/registration_page.dart';
@@ -44,6 +45,11 @@ const String kProfile = 'Profile';
     AutoRoute(
       page: CreateRoomPage,
       path: 'create',
+      fullscreenDialog: true,
+    ),
+    AutoRoute(
+      page: ConferencePage,
+      path: 'conference',
       fullscreenDialog: true,
     ),
   ],

@@ -5,13 +5,16 @@
 // **************************************************************************
 
 import 'package:auto_route/auto_route.dart' as _i1;
+import 'package:flutter/material.dart' as _i11;
 
-import '../calendar/calendar_tab.dart' as _i7;
+import '../../domain/rooms/room.dart' as _i12;
+import '../calendar/calendar_tab.dart' as _i8;
+import '../conference/conference_page.dart' as _i7;
 import '../home/home_page.dart' as _i5;
-import '../profile/profile_tab.dart' as _i9;
+import '../profile/profile_tab.dart' as _i10;
 import '../registration/registration_page.dart' as _i4;
 import '../rooms/create_room_page.dart' as _i6;
-import '../rooms/rooms_tab.dart' as _i8;
+import '../rooms/rooms_tab.dart' as _i9;
 import '../sign_in/sign_in_page.dart' as _i3;
 import '../splash/splash_page.dart' as _i2;
 
@@ -36,14 +39,22 @@ class AppRouter extends _i1.RootStackRouter {
       return _i1.MaterialPageX(
           entry: entry, child: _i6.CreateRoomPage(), fullscreenDialog: true);
     },
+    ConferencePageRoute.name: (entry) {
+      var args = entry.routeData.argsAs<ConferencePageRouteArgs>();
+      return _i1.MaterialPageX(
+          entry: entry,
+          child: _i7.ConferencePage(
+              key: args.key, conferenceRoom: args.conferenceRoom),
+          fullscreenDialog: true);
+    },
     Calendar.name: (entry) {
-      return _i1.MaterialPageX(entry: entry, child: _i7.CalendarTab());
+      return _i1.MaterialPageX(entry: entry, child: _i8.CalendarTab());
     },
     Rooms.name: (entry) {
-      return _i1.MaterialPageX(entry: entry, child: _i8.RoomsTab());
+      return _i1.MaterialPageX(entry: entry, child: _i9.RoomsTab());
     },
     Profile.name: (entry) {
-      return _i1.MaterialPageX(entry: entry, child: _i9.ProfileTab());
+      return _i1.MaterialPageX(entry: entry, child: _i10.ProfileTab());
     }
   };
 
@@ -60,7 +71,8 @@ class AppRouter extends _i1.RootStackRouter {
               _i1.RouteConfig(Rooms.name, path: 'rooms'),
               _i1.RouteConfig(Profile.name, path: 'profile')
             ]),
-        _i1.RouteConfig(CreateRoomPageRoute.name, path: 'create')
+        _i1.RouteConfig(CreateRoomPageRoute.name, path: 'create'),
+        _i1.RouteConfig(ConferencePageRoute.name, path: 'conference')
       ];
 }
 
@@ -93,6 +105,24 @@ class CreateRoomPageRoute extends _i1.PageRouteInfo {
   const CreateRoomPageRoute() : super(name, path: 'create');
 
   static const String name = 'CreateRoomPageRoute';
+}
+
+class ConferencePageRoute extends _i1.PageRouteInfo<ConferencePageRouteArgs> {
+  ConferencePageRoute({_i11.Key? key, required _i12.Room conferenceRoom})
+      : super(name,
+            path: 'conference',
+            args: ConferencePageRouteArgs(
+                key: key, conferenceRoom: conferenceRoom));
+
+  static const String name = 'ConferencePageRoute';
+}
+
+class ConferencePageRouteArgs {
+  const ConferencePageRouteArgs({this.key, required this.conferenceRoom});
+
+  final _i11.Key? key;
+
+  final _i12.Room conferenceRoom;
 }
 
 class Calendar extends _i1.PageRouteInfo {

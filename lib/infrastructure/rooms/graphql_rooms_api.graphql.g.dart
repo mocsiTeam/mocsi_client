@@ -9,13 +9,13 @@ part of 'graphql_rooms_api.graphql.dart';
 
 CreateRoom$Mutation$Room _$CreateRoom$Mutation$RoomFromJson(
     Map<String, dynamic> json) {
-  return CreateRoom$Mutation$Room()..error = json['error'] as String;
+  return CreateRoom$Mutation$Room()..link = json['link'] as String;
 }
 
 Map<String, dynamic> _$CreateRoom$Mutation$RoomToJson(
         CreateRoom$Mutation$Room instance) =>
     <String, dynamic>{
-      'error': instance.error,
+      'link': instance.link,
     };
 
 CreateRoom$Mutation _$CreateRoom$MutationFromJson(Map<String, dynamic> json) {
@@ -33,7 +33,6 @@ Map<String, dynamic> _$CreateRoom$MutationToJson(
 GetMyRooms$Query$Room _$GetMyRooms$Query$RoomFromJson(
     Map<String, dynamic> json) {
   return GetMyRooms$Query$Room()
-    ..error = json['error'] as String
     ..name = json['name'] as String
     ..link = json['link'] as String;
 }
@@ -41,7 +40,6 @@ GetMyRooms$Query$Room _$GetMyRooms$Query$RoomFromJson(
 Map<String, dynamic> _$GetMyRooms$Query$RoomToJson(
         GetMyRooms$Query$Room instance) =>
     <String, dynamic>{
-      'error': instance.error,
       'name': instance.name,
       'link': instance.link,
     };
@@ -62,6 +60,7 @@ CreateRoomArguments _$CreateRoomArgumentsFromJson(Map<String, dynamic> json) {
   return CreateRoomArguments(
     name: json['name'] as String,
     password: json['password'] as String,
+    uniqueName: json['uniqueName'] as String,
   );
 }
 
@@ -70,4 +69,5 @@ Map<String, dynamic> _$CreateRoomArgumentsToJson(
     <String, dynamic>{
       'name': instance.name,
       'password': instance.password,
+      'uniqueName': instance.uniqueName,
     };

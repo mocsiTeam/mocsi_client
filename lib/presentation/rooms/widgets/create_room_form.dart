@@ -76,7 +76,6 @@ class CreateRoomForm extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    print('!');
                     context
                         .read<CreateRoomFormBloc>()
                         .add(const CreateRoomFormEvent.createRoomPressed());

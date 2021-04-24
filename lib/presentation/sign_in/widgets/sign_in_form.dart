@@ -22,6 +22,7 @@ class SignInForm extends StatelessWidget {
                         noConnectionError: (_) => I18n.noConnectionError,
                         serverError: (_) => I18n.serverError,
                         unexpectedError: (_) => I18n.unexpectedError,
+                        userAlreadyExists: (_) => I18n.userAlreadyExists,
                         invalidEmailAndPasswordCombination: (_) =>
                             I18n.invalidEmailAndPasswordCombinationError,
                       )).show(context)

@@ -16,20 +16,20 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$CreateRoomFormEventTearOff {
   const _$CreateRoomFormEventTearOff();
 
-  NameChanged nameChanged(String nameStr) {
-    return NameChanged(
+  _NameChanged nameChanged(String nameStr) {
+    return _NameChanged(
       nameStr,
     );
   }
 
-  PasswordChanged passwordChanged(String passwordStr) {
-    return PasswordChanged(
+  _PasswordChanged passwordChanged(String passwordStr) {
+    return _PasswordChanged(
       passwordStr,
     );
   }
 
-  CreateRoomPressed createRoomPressed() {
-    return const CreateRoomPressed();
+  _CreateRoomPressed createRoomPressed() {
+    return const _CreateRoomPressed();
   }
 }
 
@@ -55,16 +55,16 @@ mixin _$CreateRoomFormEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(NameChanged value) nameChanged,
-    required TResult Function(PasswordChanged value) passwordChanged,
-    required TResult Function(CreateRoomPressed value) createRoomPressed,
+    required TResult Function(_NameChanged value) nameChanged,
+    required TResult Function(_PasswordChanged value) passwordChanged,
+    required TResult Function(_CreateRoomPressed value) createRoomPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(NameChanged value)? nameChanged,
-    TResult Function(PasswordChanged value)? passwordChanged,
-    TResult Function(CreateRoomPressed value)? createRoomPressed,
+    TResult Function(_NameChanged value)? nameChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_CreateRoomPressed value)? createRoomPressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -88,29 +88,29 @@ class _$CreateRoomFormEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $NameChangedCopyWith<$Res> {
-  factory $NameChangedCopyWith(
-          NameChanged value, $Res Function(NameChanged) then) =
-      _$NameChangedCopyWithImpl<$Res>;
+abstract class _$NameChangedCopyWith<$Res> {
+  factory _$NameChangedCopyWith(
+          _NameChanged value, $Res Function(_NameChanged) then) =
+      __$NameChangedCopyWithImpl<$Res>;
   $Res call({String nameStr});
 }
 
 /// @nodoc
-class _$NameChangedCopyWithImpl<$Res>
+class __$NameChangedCopyWithImpl<$Res>
     extends _$CreateRoomFormEventCopyWithImpl<$Res>
-    implements $NameChangedCopyWith<$Res> {
-  _$NameChangedCopyWithImpl(
-      NameChanged _value, $Res Function(NameChanged) _then)
-      : super(_value, (v) => _then(v as NameChanged));
+    implements _$NameChangedCopyWith<$Res> {
+  __$NameChangedCopyWithImpl(
+      _NameChanged _value, $Res Function(_NameChanged) _then)
+      : super(_value, (v) => _then(v as _NameChanged));
 
   @override
-  NameChanged get _value => super._value as NameChanged;
+  _NameChanged get _value => super._value as _NameChanged;
 
   @override
   $Res call({
     Object? nameStr = freezed,
   }) {
-    return _then(NameChanged(
+    return _then(_NameChanged(
       nameStr == freezed
           ? _value.nameStr
           : nameStr // ignore: cast_nullable_to_non_nullable
@@ -120,8 +120,8 @@ class _$NameChangedCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$NameChanged implements NameChanged {
-  const _$NameChanged(this.nameStr);
+class _$_NameChanged implements _NameChanged {
+  const _$_NameChanged(this.nameStr);
 
   @override
   final String nameStr;
@@ -134,7 +134,7 @@ class _$NameChanged implements NameChanged {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is NameChanged &&
+        (other is _NameChanged &&
             (identical(other.nameStr, nameStr) ||
                 const DeepCollectionEquality().equals(other.nameStr, nameStr)));
   }
@@ -145,8 +145,8 @@ class _$NameChanged implements NameChanged {
 
   @JsonKey(ignore: true)
   @override
-  $NameChangedCopyWith<NameChanged> get copyWith =>
-      _$NameChangedCopyWithImpl<NameChanged>(this, _$identity);
+  _$NameChangedCopyWith<_NameChanged> get copyWith =>
+      __$NameChangedCopyWithImpl<_NameChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -175,9 +175,9 @@ class _$NameChanged implements NameChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(NameChanged value) nameChanged,
-    required TResult Function(PasswordChanged value) passwordChanged,
-    required TResult Function(CreateRoomPressed value) createRoomPressed,
+    required TResult Function(_NameChanged value) nameChanged,
+    required TResult Function(_PasswordChanged value) passwordChanged,
+    required TResult Function(_CreateRoomPressed value) createRoomPressed,
   }) {
     return nameChanged(this);
   }
@@ -185,9 +185,9 @@ class _$NameChanged implements NameChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(NameChanged value)? nameChanged,
-    TResult Function(PasswordChanged value)? passwordChanged,
-    TResult Function(CreateRoomPressed value)? createRoomPressed,
+    TResult Function(_NameChanged value)? nameChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_CreateRoomPressed value)? createRoomPressed,
     required TResult orElse(),
   }) {
     if (nameChanged != null) {
@@ -197,39 +197,39 @@ class _$NameChanged implements NameChanged {
   }
 }
 
-abstract class NameChanged implements CreateRoomFormEvent {
-  const factory NameChanged(String nameStr) = _$NameChanged;
+abstract class _NameChanged implements CreateRoomFormEvent {
+  const factory _NameChanged(String nameStr) = _$_NameChanged;
 
   String get nameStr => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $NameChangedCopyWith<NameChanged> get copyWith =>
+  _$NameChangedCopyWith<_NameChanged> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $PasswordChangedCopyWith<$Res> {
-  factory $PasswordChangedCopyWith(
-          PasswordChanged value, $Res Function(PasswordChanged) then) =
-      _$PasswordChangedCopyWithImpl<$Res>;
+abstract class _$PasswordChangedCopyWith<$Res> {
+  factory _$PasswordChangedCopyWith(
+          _PasswordChanged value, $Res Function(_PasswordChanged) then) =
+      __$PasswordChangedCopyWithImpl<$Res>;
   $Res call({String passwordStr});
 }
 
 /// @nodoc
-class _$PasswordChangedCopyWithImpl<$Res>
+class __$PasswordChangedCopyWithImpl<$Res>
     extends _$CreateRoomFormEventCopyWithImpl<$Res>
-    implements $PasswordChangedCopyWith<$Res> {
-  _$PasswordChangedCopyWithImpl(
-      PasswordChanged _value, $Res Function(PasswordChanged) _then)
-      : super(_value, (v) => _then(v as PasswordChanged));
+    implements _$PasswordChangedCopyWith<$Res> {
+  __$PasswordChangedCopyWithImpl(
+      _PasswordChanged _value, $Res Function(_PasswordChanged) _then)
+      : super(_value, (v) => _then(v as _PasswordChanged));
 
   @override
-  PasswordChanged get _value => super._value as PasswordChanged;
+  _PasswordChanged get _value => super._value as _PasswordChanged;
 
   @override
   $Res call({
     Object? passwordStr = freezed,
   }) {
-    return _then(PasswordChanged(
+    return _then(_PasswordChanged(
       passwordStr == freezed
           ? _value.passwordStr
           : passwordStr // ignore: cast_nullable_to_non_nullable
@@ -239,8 +239,8 @@ class _$PasswordChangedCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$PasswordChanged implements PasswordChanged {
-  const _$PasswordChanged(this.passwordStr);
+class _$_PasswordChanged implements _PasswordChanged {
+  const _$_PasswordChanged(this.passwordStr);
 
   @override
   final String passwordStr;
@@ -253,7 +253,7 @@ class _$PasswordChanged implements PasswordChanged {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is PasswordChanged &&
+        (other is _PasswordChanged &&
             (identical(other.passwordStr, passwordStr) ||
                 const DeepCollectionEquality()
                     .equals(other.passwordStr, passwordStr)));
@@ -265,8 +265,8 @@ class _$PasswordChanged implements PasswordChanged {
 
   @JsonKey(ignore: true)
   @override
-  $PasswordChangedCopyWith<PasswordChanged> get copyWith =>
-      _$PasswordChangedCopyWithImpl<PasswordChanged>(this, _$identity);
+  _$PasswordChangedCopyWith<_PasswordChanged> get copyWith =>
+      __$PasswordChangedCopyWithImpl<_PasswordChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -295,9 +295,9 @@ class _$PasswordChanged implements PasswordChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(NameChanged value) nameChanged,
-    required TResult Function(PasswordChanged value) passwordChanged,
-    required TResult Function(CreateRoomPressed value) createRoomPressed,
+    required TResult Function(_NameChanged value) nameChanged,
+    required TResult Function(_PasswordChanged value) passwordChanged,
+    required TResult Function(_CreateRoomPressed value) createRoomPressed,
   }) {
     return passwordChanged(this);
   }
@@ -305,9 +305,9 @@ class _$PasswordChanged implements PasswordChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(NameChanged value)? nameChanged,
-    TResult Function(PasswordChanged value)? passwordChanged,
-    TResult Function(CreateRoomPressed value)? createRoomPressed,
+    TResult Function(_NameChanged value)? nameChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_CreateRoomPressed value)? createRoomPressed,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -317,37 +317,37 @@ class _$PasswordChanged implements PasswordChanged {
   }
 }
 
-abstract class PasswordChanged implements CreateRoomFormEvent {
-  const factory PasswordChanged(String passwordStr) = _$PasswordChanged;
+abstract class _PasswordChanged implements CreateRoomFormEvent {
+  const factory _PasswordChanged(String passwordStr) = _$_PasswordChanged;
 
   String get passwordStr => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PasswordChangedCopyWith<PasswordChanged> get copyWith =>
+  _$PasswordChangedCopyWith<_PasswordChanged> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CreateRoomPressedCopyWith<$Res> {
-  factory $CreateRoomPressedCopyWith(
-          CreateRoomPressed value, $Res Function(CreateRoomPressed) then) =
-      _$CreateRoomPressedCopyWithImpl<$Res>;
+abstract class _$CreateRoomPressedCopyWith<$Res> {
+  factory _$CreateRoomPressedCopyWith(
+          _CreateRoomPressed value, $Res Function(_CreateRoomPressed) then) =
+      __$CreateRoomPressedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$CreateRoomPressedCopyWithImpl<$Res>
+class __$CreateRoomPressedCopyWithImpl<$Res>
     extends _$CreateRoomFormEventCopyWithImpl<$Res>
-    implements $CreateRoomPressedCopyWith<$Res> {
-  _$CreateRoomPressedCopyWithImpl(
-      CreateRoomPressed _value, $Res Function(CreateRoomPressed) _then)
-      : super(_value, (v) => _then(v as CreateRoomPressed));
+    implements _$CreateRoomPressedCopyWith<$Res> {
+  __$CreateRoomPressedCopyWithImpl(
+      _CreateRoomPressed _value, $Res Function(_CreateRoomPressed) _then)
+      : super(_value, (v) => _then(v as _CreateRoomPressed));
 
   @override
-  CreateRoomPressed get _value => super._value as CreateRoomPressed;
+  _CreateRoomPressed get _value => super._value as _CreateRoomPressed;
 }
 
 /// @nodoc
-class _$CreateRoomPressed implements CreateRoomPressed {
-  const _$CreateRoomPressed();
+class _$_CreateRoomPressed implements _CreateRoomPressed {
+  const _$_CreateRoomPressed();
 
   @override
   String toString() {
@@ -356,7 +356,7 @@ class _$CreateRoomPressed implements CreateRoomPressed {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is CreateRoomPressed);
+    return identical(this, other) || (other is _CreateRoomPressed);
   }
 
   @override
@@ -389,9 +389,9 @@ class _$CreateRoomPressed implements CreateRoomPressed {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(NameChanged value) nameChanged,
-    required TResult Function(PasswordChanged value) passwordChanged,
-    required TResult Function(CreateRoomPressed value) createRoomPressed,
+    required TResult Function(_NameChanged value) nameChanged,
+    required TResult Function(_PasswordChanged value) passwordChanged,
+    required TResult Function(_CreateRoomPressed value) createRoomPressed,
   }) {
     return createRoomPressed(this);
   }
@@ -399,9 +399,9 @@ class _$CreateRoomPressed implements CreateRoomPressed {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(NameChanged value)? nameChanged,
-    TResult Function(PasswordChanged value)? passwordChanged,
-    TResult Function(CreateRoomPressed value)? createRoomPressed,
+    TResult Function(_NameChanged value)? nameChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_CreateRoomPressed value)? createRoomPressed,
     required TResult orElse(),
   }) {
     if (createRoomPressed != null) {
@@ -411,8 +411,8 @@ class _$CreateRoomPressed implements CreateRoomPressed {
   }
 }
 
-abstract class CreateRoomPressed implements CreateRoomFormEvent {
-  const factory CreateRoomPressed() = _$CreateRoomPressed;
+abstract class _CreateRoomPressed implements CreateRoomFormEvent {
+  const factory _CreateRoomPressed() = _$_CreateRoomPressed;
 }
 
 /// @nodoc

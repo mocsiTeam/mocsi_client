@@ -9,12 +9,14 @@ class Room with _$Room {
 
   const factory Room({
     required ConferenceUrl url,
+    required UniqueId uniqueName,
     required Name name,
     required Password password,
   }) = _Room;
 
   factory Room.empty() => Room(
         url: ConferenceUrl.fromUrl(''),
+        uniqueName: UniqueId(),
         name: Name(''),
         password: Password(''),
       );

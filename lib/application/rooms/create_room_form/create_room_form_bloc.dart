@@ -60,6 +60,7 @@ class CreateRoomFormBloc
                 url: ConferenceUrl.fromUrl(''),
                 name: state.name,
                 password: state.password,
+                uniqueName: UniqueId(),
               ),
             );
             return failureOrCreated.fold(

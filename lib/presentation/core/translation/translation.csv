@@ -27,6 +27,7 @@ next;Next;Далее
 unexpectedError;Unexpected Error;Непредвиденная ошибка
 noConnectionError;Check your internet connection;Проверьте ваше интернет-соединение
 invalidEmailAndPasswordCombinationError;Invalid email and password combination;Неверная комбинация адреса электронной почты и пароля
+userAlreadyExists;User already exists;Такой пользователь уже есть
 serverError;Server Error;Ошибка сервера
 rooms;Rooms;Комнаты
 createNewRoom;Create new room;Создать новую комнату

@@ -3,18 +3,18 @@ part of 'registration_form_bloc.dart';
 @freezed
 class RegistrationFormEvent with _$RegistrationFormEvent {
   const factory RegistrationFormEvent.emailChanged(String emailStr) =
-      EmailChanged;
+      _EmailChanged;
   const factory RegistrationFormEvent.passwordChanged(String passwordStr) =
-      PasswordChanged;
+      _PasswordChanged;
   const factory RegistrationFormEvent.nickNameChanged(String nickNameStr) =
-      NickNameChanged;
+      _NickNameChanged;
 
   const factory RegistrationFormEvent.firstNameChanged(String firstNameStr) =
-      FirstNameChanged;
+      _FirstNameChanged;
 
   const factory RegistrationFormEvent.lastNameChanged(String lastNameStr) =
-      LastNameChanged;
+      _LastNameChanged;
 
   const factory RegistrationFormEvent.registrationPressed() =
-      RegistrationPressed;
+      _RegistrationPressed;
 }

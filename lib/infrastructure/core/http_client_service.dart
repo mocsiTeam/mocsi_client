@@ -8,7 +8,7 @@ class HttpClientService extends http.BaseClient {
 
   @override
   Future<http.StreamedResponse> send(http.BaseRequest request) {
-    request.headers['Authorization'] = accessToken;
+    request.headers['token'] = accessToken;
     return _client.send(request);
   }
 }

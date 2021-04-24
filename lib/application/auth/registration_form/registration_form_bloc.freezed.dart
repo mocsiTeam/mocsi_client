@@ -16,38 +16,38 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$RegistrationFormEventTearOff {
   const _$RegistrationFormEventTearOff();
 
-  EmailChanged emailChanged(String emailStr) {
-    return EmailChanged(
+  _EmailChanged emailChanged(String emailStr) {
+    return _EmailChanged(
       emailStr,
     );
   }
 
-  PasswordChanged passwordChanged(String passwordStr) {
-    return PasswordChanged(
+  _PasswordChanged passwordChanged(String passwordStr) {
+    return _PasswordChanged(
       passwordStr,
     );
   }
 
-  NickNameChanged nickNameChanged(String nickNameStr) {
-    return NickNameChanged(
+  _NickNameChanged nickNameChanged(String nickNameStr) {
+    return _NickNameChanged(
       nickNameStr,
     );
   }
 
-  FirstNameChanged firstNameChanged(String firstNameStr) {
-    return FirstNameChanged(
+  _FirstNameChanged firstNameChanged(String firstNameStr) {
+    return _FirstNameChanged(
       firstNameStr,
     );
   }
 
-  LastNameChanged lastNameChanged(String lastNameStr) {
-    return LastNameChanged(
+  _LastNameChanged lastNameChanged(String lastNameStr) {
+    return _LastNameChanged(
       lastNameStr,
     );
   }
 
-  RegistrationPressed registrationPressed() {
-    return const RegistrationPressed();
+  _RegistrationPressed registrationPressed() {
+    return const _RegistrationPressed();
   }
 }
 
@@ -79,22 +79,22 @@ mixin _$RegistrationFormEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(EmailChanged value) emailChanged,
-    required TResult Function(PasswordChanged value) passwordChanged,
-    required TResult Function(NickNameChanged value) nickNameChanged,
-    required TResult Function(FirstNameChanged value) firstNameChanged,
-    required TResult Function(LastNameChanged value) lastNameChanged,
-    required TResult Function(RegistrationPressed value) registrationPressed,
+    required TResult Function(_EmailChanged value) emailChanged,
+    required TResult Function(_PasswordChanged value) passwordChanged,
+    required TResult Function(_NickNameChanged value) nickNameChanged,
+    required TResult Function(_FirstNameChanged value) firstNameChanged,
+    required TResult Function(_LastNameChanged value) lastNameChanged,
+    required TResult Function(_RegistrationPressed value) registrationPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmailChanged value)? emailChanged,
-    TResult Function(PasswordChanged value)? passwordChanged,
-    TResult Function(NickNameChanged value)? nickNameChanged,
-    TResult Function(FirstNameChanged value)? firstNameChanged,
-    TResult Function(LastNameChanged value)? lastNameChanged,
-    TResult Function(RegistrationPressed value)? registrationPressed,
+    TResult Function(_EmailChanged value)? emailChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_NickNameChanged value)? nickNameChanged,
+    TResult Function(_FirstNameChanged value)? firstNameChanged,
+    TResult Function(_LastNameChanged value)? lastNameChanged,
+    TResult Function(_RegistrationPressed value)? registrationPressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -118,29 +118,29 @@ class _$RegistrationFormEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $EmailChangedCopyWith<$Res> {
-  factory $EmailChangedCopyWith(
-          EmailChanged value, $Res Function(EmailChanged) then) =
-      _$EmailChangedCopyWithImpl<$Res>;
+abstract class _$EmailChangedCopyWith<$Res> {
+  factory _$EmailChangedCopyWith(
+          _EmailChanged value, $Res Function(_EmailChanged) then) =
+      __$EmailChangedCopyWithImpl<$Res>;
   $Res call({String emailStr});
 }
 
 /// @nodoc
-class _$EmailChangedCopyWithImpl<$Res>
+class __$EmailChangedCopyWithImpl<$Res>
     extends _$RegistrationFormEventCopyWithImpl<$Res>
-    implements $EmailChangedCopyWith<$Res> {
-  _$EmailChangedCopyWithImpl(
-      EmailChanged _value, $Res Function(EmailChanged) _then)
-      : super(_value, (v) => _then(v as EmailChanged));
+    implements _$EmailChangedCopyWith<$Res> {
+  __$EmailChangedCopyWithImpl(
+      _EmailChanged _value, $Res Function(_EmailChanged) _then)
+      : super(_value, (v) => _then(v as _EmailChanged));
 
   @override
-  EmailChanged get _value => super._value as EmailChanged;
+  _EmailChanged get _value => super._value as _EmailChanged;
 
   @override
   $Res call({
     Object? emailStr = freezed,
   }) {
-    return _then(EmailChanged(
+    return _then(_EmailChanged(
       emailStr == freezed
           ? _value.emailStr
           : emailStr // ignore: cast_nullable_to_non_nullable
@@ -150,8 +150,8 @@ class _$EmailChangedCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$EmailChanged implements EmailChanged {
-  const _$EmailChanged(this.emailStr);
+class _$_EmailChanged implements _EmailChanged {
+  const _$_EmailChanged(this.emailStr);
 
   @override
   final String emailStr;
@@ -164,7 +164,7 @@ class _$EmailChanged implements EmailChanged {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is EmailChanged &&
+        (other is _EmailChanged &&
             (identical(other.emailStr, emailStr) ||
                 const DeepCollectionEquality()
                     .equals(other.emailStr, emailStr)));
@@ -176,8 +176,8 @@ class _$EmailChanged implements EmailChanged {
 
   @JsonKey(ignore: true)
   @override
-  $EmailChangedCopyWith<EmailChanged> get copyWith =>
-      _$EmailChangedCopyWithImpl<EmailChanged>(this, _$identity);
+  _$EmailChangedCopyWith<_EmailChanged> get copyWith =>
+      __$EmailChangedCopyWithImpl<_EmailChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -212,12 +212,12 @@ class _$EmailChanged implements EmailChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(EmailChanged value) emailChanged,
-    required TResult Function(PasswordChanged value) passwordChanged,
-    required TResult Function(NickNameChanged value) nickNameChanged,
-    required TResult Function(FirstNameChanged value) firstNameChanged,
-    required TResult Function(LastNameChanged value) lastNameChanged,
-    required TResult Function(RegistrationPressed value) registrationPressed,
+    required TResult Function(_EmailChanged value) emailChanged,
+    required TResult Function(_PasswordChanged value) passwordChanged,
+    required TResult Function(_NickNameChanged value) nickNameChanged,
+    required TResult Function(_FirstNameChanged value) firstNameChanged,
+    required TResult Function(_LastNameChanged value) lastNameChanged,
+    required TResult Function(_RegistrationPressed value) registrationPressed,
   }) {
     return emailChanged(this);
   }
@@ -225,12 +225,12 @@ class _$EmailChanged implements EmailChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmailChanged value)? emailChanged,
-    TResult Function(PasswordChanged value)? passwordChanged,
-    TResult Function(NickNameChanged value)? nickNameChanged,
-    TResult Function(FirstNameChanged value)? firstNameChanged,
-    TResult Function(LastNameChanged value)? lastNameChanged,
-    TResult Function(RegistrationPressed value)? registrationPressed,
+    TResult Function(_EmailChanged value)? emailChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_NickNameChanged value)? nickNameChanged,
+    TResult Function(_FirstNameChanged value)? firstNameChanged,
+    TResult Function(_LastNameChanged value)? lastNameChanged,
+    TResult Function(_RegistrationPressed value)? registrationPressed,
     required TResult orElse(),
   }) {
     if (emailChanged != null) {
@@ -240,39 +240,39 @@ class _$EmailChanged implements EmailChanged {
   }
 }
 
-abstract class EmailChanged implements RegistrationFormEvent {
-  const factory EmailChanged(String emailStr) = _$EmailChanged;
+abstract class _EmailChanged implements RegistrationFormEvent {
+  const factory _EmailChanged(String emailStr) = _$_EmailChanged;
 
   String get emailStr => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $EmailChangedCopyWith<EmailChanged> get copyWith =>
+  _$EmailChangedCopyWith<_EmailChanged> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $PasswordChangedCopyWith<$Res> {
-  factory $PasswordChangedCopyWith(
-          PasswordChanged value, $Res Function(PasswordChanged) then) =
-      _$PasswordChangedCopyWithImpl<$Res>;
+abstract class _$PasswordChangedCopyWith<$Res> {
+  factory _$PasswordChangedCopyWith(
+          _PasswordChanged value, $Res Function(_PasswordChanged) then) =
+      __$PasswordChangedCopyWithImpl<$Res>;
   $Res call({String passwordStr});
 }
 
 /// @nodoc
-class _$PasswordChangedCopyWithImpl<$Res>
+class __$PasswordChangedCopyWithImpl<$Res>
     extends _$RegistrationFormEventCopyWithImpl<$Res>
-    implements $PasswordChangedCopyWith<$Res> {
-  _$PasswordChangedCopyWithImpl(
-      PasswordChanged _value, $Res Function(PasswordChanged) _then)
-      : super(_value, (v) => _then(v as PasswordChanged));
+    implements _$PasswordChangedCopyWith<$Res> {
+  __$PasswordChangedCopyWithImpl(
+      _PasswordChanged _value, $Res Function(_PasswordChanged) _then)
+      : super(_value, (v) => _then(v as _PasswordChanged));
 
   @override
-  PasswordChanged get _value => super._value as PasswordChanged;
+  _PasswordChanged get _value => super._value as _PasswordChanged;
 
   @override
   $Res call({
     Object? passwordStr = freezed,
   }) {
-    return _then(PasswordChanged(
+    return _then(_PasswordChanged(
       passwordStr == freezed
           ? _value.passwordStr
           : passwordStr // ignore: cast_nullable_to_non_nullable
@@ -282,8 +282,8 @@ class _$PasswordChangedCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$PasswordChanged implements PasswordChanged {
-  const _$PasswordChanged(this.passwordStr);
+class _$_PasswordChanged implements _PasswordChanged {
+  const _$_PasswordChanged(this.passwordStr);
 
   @override
   final String passwordStr;
@@ -296,7 +296,7 @@ class _$PasswordChanged implements PasswordChanged {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is PasswordChanged &&
+        (other is _PasswordChanged &&
             (identical(other.passwordStr, passwordStr) ||
                 const DeepCollectionEquality()
                     .equals(other.passwordStr, passwordStr)));
@@ -308,8 +308,8 @@ class _$PasswordChanged implements PasswordChanged {
 
   @JsonKey(ignore: true)
   @override
-  $PasswordChangedCopyWith<PasswordChanged> get copyWith =>
-      _$PasswordChangedCopyWithImpl<PasswordChanged>(this, _$identity);
+  _$PasswordChangedCopyWith<_PasswordChanged> get copyWith =>
+      __$PasswordChangedCopyWithImpl<_PasswordChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -344,12 +344,12 @@ class _$PasswordChanged implements PasswordChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(EmailChanged value) emailChanged,
-    required TResult Function(PasswordChanged value) passwordChanged,
-    required TResult Function(NickNameChanged value) nickNameChanged,
-    required TResult Function(FirstNameChanged value) firstNameChanged,
-    required TResult Function(LastNameChanged value) lastNameChanged,
-    required TResult Function(RegistrationPressed value) registrationPressed,
+    required TResult Function(_EmailChanged value) emailChanged,
+    required TResult Function(_PasswordChanged value) passwordChanged,
+    required TResult Function(_NickNameChanged value) nickNameChanged,
+    required TResult Function(_FirstNameChanged value) firstNameChanged,
+    required TResult Function(_LastNameChanged value) lastNameChanged,
+    required TResult Function(_RegistrationPressed value) registrationPressed,
   }) {
     return passwordChanged(this);
   }
@@ -357,12 +357,12 @@ class _$PasswordChanged implements PasswordChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmailChanged value)? emailChanged,
-    TResult Function(PasswordChanged value)? passwordChanged,
-    TResult Function(NickNameChanged value)? nickNameChanged,
-    TResult Function(FirstNameChanged value)? firstNameChanged,
-    TResult Function(LastNameChanged value)? lastNameChanged,
-    TResult Function(RegistrationPressed value)? registrationPressed,
+    TResult Function(_EmailChanged value)? emailChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_NickNameChanged value)? nickNameChanged,
+    TResult Function(_FirstNameChanged value)? firstNameChanged,
+    TResult Function(_LastNameChanged value)? lastNameChanged,
+    TResult Function(_RegistrationPressed value)? registrationPressed,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -372,39 +372,39 @@ class _$PasswordChanged implements PasswordChanged {
   }
 }
 
-abstract class PasswordChanged implements RegistrationFormEvent {
-  const factory PasswordChanged(String passwordStr) = _$PasswordChanged;
+abstract class _PasswordChanged implements RegistrationFormEvent {
+  const factory _PasswordChanged(String passwordStr) = _$_PasswordChanged;
 
   String get passwordStr => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PasswordChangedCopyWith<PasswordChanged> get copyWith =>
+  _$PasswordChangedCopyWith<_PasswordChanged> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $NickNameChangedCopyWith<$Res> {
-  factory $NickNameChangedCopyWith(
-          NickNameChanged value, $Res Function(NickNameChanged) then) =
-      _$NickNameChangedCopyWithImpl<$Res>;
+abstract class _$NickNameChangedCopyWith<$Res> {
+  factory _$NickNameChangedCopyWith(
+          _NickNameChanged value, $Res Function(_NickNameChanged) then) =
+      __$NickNameChangedCopyWithImpl<$Res>;
   $Res call({String nickNameStr});
 }
 
 /// @nodoc
-class _$NickNameChangedCopyWithImpl<$Res>
+class __$NickNameChangedCopyWithImpl<$Res>
     extends _$RegistrationFormEventCopyWithImpl<$Res>
-    implements $NickNameChangedCopyWith<$Res> {
-  _$NickNameChangedCopyWithImpl(
-      NickNameChanged _value, $Res Function(NickNameChanged) _then)
-      : super(_value, (v) => _then(v as NickNameChanged));
+    implements _$NickNameChangedCopyWith<$Res> {
+  __$NickNameChangedCopyWithImpl(
+      _NickNameChanged _value, $Res Function(_NickNameChanged) _then)
+      : super(_value, (v) => _then(v as _NickNameChanged));
 
   @override
-  NickNameChanged get _value => super._value as NickNameChanged;
+  _NickNameChanged get _value => super._value as _NickNameChanged;
 
   @override
   $Res call({
     Object? nickNameStr = freezed,
   }) {
-    return _then(NickNameChanged(
+    return _then(_NickNameChanged(
       nickNameStr == freezed
           ? _value.nickNameStr
           : nickNameStr // ignore: cast_nullable_to_non_nullable
@@ -414,8 +414,8 @@ class _$NickNameChangedCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$NickNameChanged implements NickNameChanged {
-  const _$NickNameChanged(this.nickNameStr);
+class _$_NickNameChanged implements _NickNameChanged {
+  const _$_NickNameChanged(this.nickNameStr);
 
   @override
   final String nickNameStr;
@@ -428,7 +428,7 @@ class _$NickNameChanged implements NickNameChanged {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is NickNameChanged &&
+        (other is _NickNameChanged &&
             (identical(other.nickNameStr, nickNameStr) ||
                 const DeepCollectionEquality()
                     .equals(other.nickNameStr, nickNameStr)));
@@ -440,8 +440,8 @@ class _$NickNameChanged implements NickNameChanged {
 
   @JsonKey(ignore: true)
   @override
-  $NickNameChangedCopyWith<NickNameChanged> get copyWith =>
-      _$NickNameChangedCopyWithImpl<NickNameChanged>(this, _$identity);
+  _$NickNameChangedCopyWith<_NickNameChanged> get copyWith =>
+      __$NickNameChangedCopyWithImpl<_NickNameChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -476,12 +476,12 @@ class _$NickNameChanged implements NickNameChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(EmailChanged value) emailChanged,
-    required TResult Function(PasswordChanged value) passwordChanged,
-    required TResult Function(NickNameChanged value) nickNameChanged,
-    required TResult Function(FirstNameChanged value) firstNameChanged,
-    required TResult Function(LastNameChanged value) lastNameChanged,
-    required TResult Function(RegistrationPressed value) registrationPressed,
+    required TResult Function(_EmailChanged value) emailChanged,
+    required TResult Function(_PasswordChanged value) passwordChanged,
+    required TResult Function(_NickNameChanged value) nickNameChanged,
+    required TResult Function(_FirstNameChanged value) firstNameChanged,
+    required TResult Function(_LastNameChanged value) lastNameChanged,
+    required TResult Function(_RegistrationPressed value) registrationPressed,
   }) {
     return nickNameChanged(this);
   }
@@ -489,12 +489,12 @@ class _$NickNameChanged implements NickNameChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmailChanged value)? emailChanged,
-    TResult Function(PasswordChanged value)? passwordChanged,
-    TResult Function(NickNameChanged value)? nickNameChanged,
-    TResult Function(FirstNameChanged value)? firstNameChanged,
-    TResult Function(LastNameChanged value)? lastNameChanged,
-    TResult Function(RegistrationPressed value)? registrationPressed,
+    TResult Function(_EmailChanged value)? emailChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_NickNameChanged value)? nickNameChanged,
+    TResult Function(_FirstNameChanged value)? firstNameChanged,
+    TResult Function(_LastNameChanged value)? lastNameChanged,
+    TResult Function(_RegistrationPressed value)? registrationPressed,
     required TResult orElse(),
   }) {
     if (nickNameChanged != null) {
@@ -504,39 +504,39 @@ class _$NickNameChanged implements NickNameChanged {
   }
 }
 
-abstract class NickNameChanged implements RegistrationFormEvent {
-  const factory NickNameChanged(String nickNameStr) = _$NickNameChanged;
+abstract class _NickNameChanged implements RegistrationFormEvent {
+  const factory _NickNameChanged(String nickNameStr) = _$_NickNameChanged;
 
   String get nickNameStr => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $NickNameChangedCopyWith<NickNameChanged> get copyWith =>
+  _$NickNameChangedCopyWith<_NickNameChanged> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $FirstNameChangedCopyWith<$Res> {
-  factory $FirstNameChangedCopyWith(
-          FirstNameChanged value, $Res Function(FirstNameChanged) then) =
-      _$FirstNameChangedCopyWithImpl<$Res>;
+abstract class _$FirstNameChangedCopyWith<$Res> {
+  factory _$FirstNameChangedCopyWith(
+          _FirstNameChanged value, $Res Function(_FirstNameChanged) then) =
+      __$FirstNameChangedCopyWithImpl<$Res>;
   $Res call({String firstNameStr});
 }
 
 /// @nodoc
-class _$FirstNameChangedCopyWithImpl<$Res>
+class __$FirstNameChangedCopyWithImpl<$Res>
     extends _$RegistrationFormEventCopyWithImpl<$Res>
-    implements $FirstNameChangedCopyWith<$Res> {
-  _$FirstNameChangedCopyWithImpl(
-      FirstNameChanged _value, $Res Function(FirstNameChanged) _then)
-      : super(_value, (v) => _then(v as FirstNameChanged));
+    implements _$FirstNameChangedCopyWith<$Res> {
+  __$FirstNameChangedCopyWithImpl(
+      _FirstNameChanged _value, $Res Function(_FirstNameChanged) _then)
+      : super(_value, (v) => _then(v as _FirstNameChanged));
 
   @override
-  FirstNameChanged get _value => super._value as FirstNameChanged;
+  _FirstNameChanged get _value => super._value as _FirstNameChanged;
 
   @override
   $Res call({
     Object? firstNameStr = freezed,
   }) {
-    return _then(FirstNameChanged(
+    return _then(_FirstNameChanged(
       firstNameStr == freezed
           ? _value.firstNameStr
           : firstNameStr // ignore: cast_nullable_to_non_nullable
@@ -546,8 +546,8 @@ class _$FirstNameChangedCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$FirstNameChanged implements FirstNameChanged {
-  const _$FirstNameChanged(this.firstNameStr);
+class _$_FirstNameChanged implements _FirstNameChanged {
+  const _$_FirstNameChanged(this.firstNameStr);
 
   @override
   final String firstNameStr;
@@ -560,7 +560,7 @@ class _$FirstNameChanged implements FirstNameChanged {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is FirstNameChanged &&
+        (other is _FirstNameChanged &&
             (identical(other.firstNameStr, firstNameStr) ||
                 const DeepCollectionEquality()
                     .equals(other.firstNameStr, firstNameStr)));
@@ -572,8 +572,8 @@ class _$FirstNameChanged implements FirstNameChanged {
 
   @JsonKey(ignore: true)
   @override
-  $FirstNameChangedCopyWith<FirstNameChanged> get copyWith =>
-      _$FirstNameChangedCopyWithImpl<FirstNameChanged>(this, _$identity);
+  _$FirstNameChangedCopyWith<_FirstNameChanged> get copyWith =>
+      __$FirstNameChangedCopyWithImpl<_FirstNameChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -608,12 +608,12 @@ class _$FirstNameChanged implements FirstNameChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(EmailChanged value) emailChanged,
-    required TResult Function(PasswordChanged value) passwordChanged,
-    required TResult Function(NickNameChanged value) nickNameChanged,
-    required TResult Function(FirstNameChanged value) firstNameChanged,
-    required TResult Function(LastNameChanged value) lastNameChanged,
-    required TResult Function(RegistrationPressed value) registrationPressed,
+    required TResult Function(_EmailChanged value) emailChanged,
+    required TResult Function(_PasswordChanged value) passwordChanged,
+    required TResult Function(_NickNameChanged value) nickNameChanged,
+    required TResult Function(_FirstNameChanged value) firstNameChanged,
+    required TResult Function(_LastNameChanged value) lastNameChanged,
+    required TResult Function(_RegistrationPressed value) registrationPressed,
   }) {
     return firstNameChanged(this);
   }
@@ -621,12 +621,12 @@ class _$FirstNameChanged implements FirstNameChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmailChanged value)? emailChanged,
-    TResult Function(PasswordChanged value)? passwordChanged,
-    TResult Function(NickNameChanged value)? nickNameChanged,
-    TResult Function(FirstNameChanged value)? firstNameChanged,
-    TResult Function(LastNameChanged value)? lastNameChanged,
-    TResult Function(RegistrationPressed value)? registrationPressed,
+    TResult Function(_EmailChanged value)? emailChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_NickNameChanged value)? nickNameChanged,
+    TResult Function(_FirstNameChanged value)? firstNameChanged,
+    TResult Function(_LastNameChanged value)? lastNameChanged,
+    TResult Function(_RegistrationPressed value)? registrationPressed,
     required TResult orElse(),
   }) {
     if (firstNameChanged != null) {
@@ -636,39 +636,39 @@ class _$FirstNameChanged implements FirstNameChanged {
   }
 }
 
-abstract class FirstNameChanged implements RegistrationFormEvent {
-  const factory FirstNameChanged(String firstNameStr) = _$FirstNameChanged;
+abstract class _FirstNameChanged implements RegistrationFormEvent {
+  const factory _FirstNameChanged(String firstNameStr) = _$_FirstNameChanged;
 
   String get firstNameStr => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $FirstNameChangedCopyWith<FirstNameChanged> get copyWith =>
+  _$FirstNameChangedCopyWith<_FirstNameChanged> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LastNameChangedCopyWith<$Res> {
-  factory $LastNameChangedCopyWith(
-          LastNameChanged value, $Res Function(LastNameChanged) then) =
-      _$LastNameChangedCopyWithImpl<$Res>;
+abstract class _$LastNameChangedCopyWith<$Res> {
+  factory _$LastNameChangedCopyWith(
+          _LastNameChanged value, $Res Function(_LastNameChanged) then) =
+      __$LastNameChangedCopyWithImpl<$Res>;
   $Res call({String lastNameStr});
 }
 
 /// @nodoc
-class _$LastNameChangedCopyWithImpl<$Res>
+class __$LastNameChangedCopyWithImpl<$Res>
     extends _$RegistrationFormEventCopyWithImpl<$Res>
-    implements $LastNameChangedCopyWith<$Res> {
-  _$LastNameChangedCopyWithImpl(
-      LastNameChanged _value, $Res Function(LastNameChanged) _then)
-      : super(_value, (v) => _then(v as LastNameChanged));
+    implements _$LastNameChangedCopyWith<$Res> {
+  __$LastNameChangedCopyWithImpl(
+      _LastNameChanged _value, $Res Function(_LastNameChanged) _then)
+      : super(_value, (v) => _then(v as _LastNameChanged));
 
   @override
-  LastNameChanged get _value => super._value as LastNameChanged;
+  _LastNameChanged get _value => super._value as _LastNameChanged;
 
   @override
   $Res call({
     Object? lastNameStr = freezed,
   }) {
-    return _then(LastNameChanged(
+    return _then(_LastNameChanged(
       lastNameStr == freezed
           ? _value.lastNameStr
           : lastNameStr // ignore: cast_nullable_to_non_nullable
@@ -678,8 +678,8 @@ class _$LastNameChangedCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$LastNameChanged implements LastNameChanged {
-  const _$LastNameChanged(this.lastNameStr);
+class _$_LastNameChanged implements _LastNameChanged {
+  const _$_LastNameChanged(this.lastNameStr);
 
   @override
   final String lastNameStr;
@@ -692,7 +692,7 @@ class _$LastNameChanged implements LastNameChanged {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is LastNameChanged &&
+        (other is _LastNameChanged &&
             (identical(other.lastNameStr, lastNameStr) ||
                 const DeepCollectionEquality()
                     .equals(other.lastNameStr, lastNameStr)));
@@ -704,8 +704,8 @@ class _$LastNameChanged implements LastNameChanged {
 
   @JsonKey(ignore: true)
   @override
-  $LastNameChangedCopyWith<LastNameChanged> get copyWith =>
-      _$LastNameChangedCopyWithImpl<LastNameChanged>(this, _$identity);
+  _$LastNameChangedCopyWith<_LastNameChanged> get copyWith =>
+      __$LastNameChangedCopyWithImpl<_LastNameChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -740,12 +740,12 @@ class _$LastNameChanged implements LastNameChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(EmailChanged value) emailChanged,
-    required TResult Function(PasswordChanged value) passwordChanged,
-    required TResult Function(NickNameChanged value) nickNameChanged,
-    required TResult Function(FirstNameChanged value) firstNameChanged,
-    required TResult Function(LastNameChanged value) lastNameChanged,
-    required TResult Function(RegistrationPressed value) registrationPressed,
+    required TResult Function(_EmailChanged value) emailChanged,
+    required TResult Function(_PasswordChanged value) passwordChanged,
+    required TResult Function(_NickNameChanged value) nickNameChanged,
+    required TResult Function(_FirstNameChanged value) firstNameChanged,
+    required TResult Function(_LastNameChanged value) lastNameChanged,
+    required TResult Function(_RegistrationPressed value) registrationPressed,
   }) {
     return lastNameChanged(this);
   }
@@ -753,12 +753,12 @@ class _$LastNameChanged implements LastNameChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmailChanged value)? emailChanged,
-    TResult Function(PasswordChanged value)? passwordChanged,
-    TResult Function(NickNameChanged value)? nickNameChanged,
-    TResult Function(FirstNameChanged value)? firstNameChanged,
-    TResult Function(LastNameChanged value)? lastNameChanged,
-    TResult Function(RegistrationPressed value)? registrationPressed,
+    TResult Function(_EmailChanged value)? emailChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_NickNameChanged value)? nickNameChanged,
+    TResult Function(_FirstNameChanged value)? firstNameChanged,
+    TResult Function(_LastNameChanged value)? lastNameChanged,
+    TResult Function(_RegistrationPressed value)? registrationPressed,
     required TResult orElse(),
   }) {
     if (lastNameChanged != null) {
@@ -768,37 +768,37 @@ class _$LastNameChanged implements LastNameChanged {
   }
 }
 
-abstract class LastNameChanged implements RegistrationFormEvent {
-  const factory LastNameChanged(String lastNameStr) = _$LastNameChanged;
+abstract class _LastNameChanged implements RegistrationFormEvent {
+  const factory _LastNameChanged(String lastNameStr) = _$_LastNameChanged;
 
   String get lastNameStr => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LastNameChangedCopyWith<LastNameChanged> get copyWith =>
+  _$LastNameChangedCopyWith<_LastNameChanged> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $RegistrationPressedCopyWith<$Res> {
-  factory $RegistrationPressedCopyWith(
-          RegistrationPressed value, $Res Function(RegistrationPressed) then) =
-      _$RegistrationPressedCopyWithImpl<$Res>;
+abstract class _$RegistrationPressedCopyWith<$Res> {
+  factory _$RegistrationPressedCopyWith(_RegistrationPressed value,
+          $Res Function(_RegistrationPressed) then) =
+      __$RegistrationPressedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$RegistrationPressedCopyWithImpl<$Res>
+class __$RegistrationPressedCopyWithImpl<$Res>
     extends _$RegistrationFormEventCopyWithImpl<$Res>
-    implements $RegistrationPressedCopyWith<$Res> {
-  _$RegistrationPressedCopyWithImpl(
-      RegistrationPressed _value, $Res Function(RegistrationPressed) _then)
-      : super(_value, (v) => _then(v as RegistrationPressed));
+    implements _$RegistrationPressedCopyWith<$Res> {
+  __$RegistrationPressedCopyWithImpl(
+      _RegistrationPressed _value, $Res Function(_RegistrationPressed) _then)
+      : super(_value, (v) => _then(v as _RegistrationPressed));
 
   @override
-  RegistrationPressed get _value => super._value as RegistrationPressed;
+  _RegistrationPressed get _value => super._value as _RegistrationPressed;
 }
 
 /// @nodoc
-class _$RegistrationPressed implements RegistrationPressed {
-  const _$RegistrationPressed();
+class _$_RegistrationPressed implements _RegistrationPressed {
+  const _$_RegistrationPressed();
 
   @override
   String toString() {
@@ -807,7 +807,7 @@ class _$RegistrationPressed implements RegistrationPressed {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is RegistrationPressed);
+    return identical(this, other) || (other is _RegistrationPressed);
   }
 
   @override
@@ -846,12 +846,12 @@ class _$RegistrationPressed implements RegistrationPressed {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(EmailChanged value) emailChanged,
-    required TResult Function(PasswordChanged value) passwordChanged,
-    required TResult Function(NickNameChanged value) nickNameChanged,
-    required TResult Function(FirstNameChanged value) firstNameChanged,
-    required TResult Function(LastNameChanged value) lastNameChanged,
-    required TResult Function(RegistrationPressed value) registrationPressed,
+    required TResult Function(_EmailChanged value) emailChanged,
+    required TResult Function(_PasswordChanged value) passwordChanged,
+    required TResult Function(_NickNameChanged value) nickNameChanged,
+    required TResult Function(_FirstNameChanged value) firstNameChanged,
+    required TResult Function(_LastNameChanged value) lastNameChanged,
+    required TResult Function(_RegistrationPressed value) registrationPressed,
   }) {
     return registrationPressed(this);
   }
@@ -859,12 +859,12 @@ class _$RegistrationPressed implements RegistrationPressed {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmailChanged value)? emailChanged,
-    TResult Function(PasswordChanged value)? passwordChanged,
-    TResult Function(NickNameChanged value)? nickNameChanged,
-    TResult Function(FirstNameChanged value)? firstNameChanged,
-    TResult Function(LastNameChanged value)? lastNameChanged,
-    TResult Function(RegistrationPressed value)? registrationPressed,
+    TResult Function(_EmailChanged value)? emailChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_NickNameChanged value)? nickNameChanged,
+    TResult Function(_FirstNameChanged value)? firstNameChanged,
+    TResult Function(_LastNameChanged value)? lastNameChanged,
+    TResult Function(_RegistrationPressed value)? registrationPressed,
     required TResult orElse(),
   }) {
     if (registrationPressed != null) {
@@ -874,8 +874,8 @@ class _$RegistrationPressed implements RegistrationPressed {
   }
 }
 
-abstract class RegistrationPressed implements RegistrationFormEvent {
-  const factory RegistrationPressed() = _$RegistrationPressed;
+abstract class _RegistrationPressed implements RegistrationFormEvent {
+  const factory _RegistrationPressed() = _$_RegistrationPressed;
 }
 
 /// @nodoc
