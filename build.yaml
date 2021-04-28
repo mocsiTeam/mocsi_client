@@ -25,3 +25,6 @@ targets:
             - output: lib/infrastructure/conference/graphql_conference_api.dart
               schema: lib/infrastructure/core/graphql/mocsi.schema.graphql
               queries_glob: lib/infrastructure/conference/**.graphql
+            - output: lib/infrastructure/profile/graphql_profile_api.dart
+              schema: lib/infrastructure/core/graphql/mocsi.schema.graphql
+              queries_glob: lib/infrastructure/profile/**.graphql

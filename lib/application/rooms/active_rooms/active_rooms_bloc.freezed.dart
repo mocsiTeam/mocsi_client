@@ -13,6 +13,285 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
+class _$ActiveRoomsEventTearOff {
+  const _$ActiveRoomsEventTearOff();
+
+  _Opened opened() {
+    return const _Opened();
+  }
+
+  _RoomsReceived roomsReceived(
+      Either<RoomsFailure, KtList<Room>> failureOrRooms) {
+    return _RoomsReceived(
+      failureOrRooms,
+    );
+  }
+}
+
+/// @nodoc
+const $ActiveRoomsEvent = _$ActiveRoomsEventTearOff();
+
+/// @nodoc
+mixin _$ActiveRoomsEvent {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() opened,
+    required TResult Function(Either<RoomsFailure, KtList<Room>> failureOrRooms)
+        roomsReceived,
+  }) =>
+      throw _privateConstructorUsedError;
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? opened,
+    TResult Function(Either<RoomsFailure, KtList<Room>> failureOrRooms)?
+        roomsReceived,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Opened value) opened,
+    required TResult Function(_RoomsReceived value) roomsReceived,
+  }) =>
+      throw _privateConstructorUsedError;
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Opened value)? opened,
+    TResult Function(_RoomsReceived value)? roomsReceived,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ActiveRoomsEventCopyWith<$Res> {
+  factory $ActiveRoomsEventCopyWith(
+          ActiveRoomsEvent value, $Res Function(ActiveRoomsEvent) then) =
+      _$ActiveRoomsEventCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$ActiveRoomsEventCopyWithImpl<$Res>
+    implements $ActiveRoomsEventCopyWith<$Res> {
+  _$ActiveRoomsEventCopyWithImpl(this._value, this._then);
+
+  final ActiveRoomsEvent _value;
+
+  // ignore: unused_field
+  final $Res Function(ActiveRoomsEvent) _then;
+}
+
+/// @nodoc
+abstract class _$OpenedCopyWith<$Res> {
+  factory _$OpenedCopyWith(_Opened value, $Res Function(_Opened) then) =
+      __$OpenedCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$OpenedCopyWithImpl<$Res> extends _$ActiveRoomsEventCopyWithImpl<$Res>
+    implements _$OpenedCopyWith<$Res> {
+  __$OpenedCopyWithImpl(_Opened _value, $Res Function(_Opened) _then)
+      : super(_value, (v) => _then(v as _Opened));
+
+  @override
+  _Opened get _value => super._value as _Opened;
+}
+
+/// @nodoc
+class _$_Opened implements _Opened {
+  const _$_Opened();
+
+  @override
+  String toString() {
+    return 'ActiveRoomsEvent.opened()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _Opened);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() opened,
+    required TResult Function(Either<RoomsFailure, KtList<Room>> failureOrRooms)
+        roomsReceived,
+  }) {
+    return opened();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? opened,
+    TResult Function(Either<RoomsFailure, KtList<Room>> failureOrRooms)?
+        roomsReceived,
+    required TResult orElse(),
+  }) {
+    if (opened != null) {
+      return opened();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Opened value) opened,
+    required TResult Function(_RoomsReceived value) roomsReceived,
+  }) {
+    return opened(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Opened value)? opened,
+    TResult Function(_RoomsReceived value)? roomsReceived,
+    required TResult orElse(),
+  }) {
+    if (opened != null) {
+      return opened(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Opened implements ActiveRoomsEvent {
+  const factory _Opened() = _$_Opened;
+}
+
+/// @nodoc
+abstract class _$RoomsReceivedCopyWith<$Res> {
+  factory _$RoomsReceivedCopyWith(
+          _RoomsReceived value, $Res Function(_RoomsReceived) then) =
+      __$RoomsReceivedCopyWithImpl<$Res>;
+
+  $Res call({Either<RoomsFailure, KtList<Room>> failureOrRooms});
+}
+
+/// @nodoc
+class __$RoomsReceivedCopyWithImpl<$Res>
+    extends _$ActiveRoomsEventCopyWithImpl<$Res>
+    implements _$RoomsReceivedCopyWith<$Res> {
+  __$RoomsReceivedCopyWithImpl(
+      _RoomsReceived _value, $Res Function(_RoomsReceived) _then)
+      : super(_value, (v) => _then(v as _RoomsReceived));
+
+  @override
+  _RoomsReceived get _value => super._value as _RoomsReceived;
+
+  @override
+  $Res call({
+    Object? failureOrRooms = freezed,
+  }) {
+    return _then(_RoomsReceived(
+      failureOrRooms == freezed
+          ? _value.failureOrRooms
+          : failureOrRooms // ignore: cast_nullable_to_non_nullable
+              as Either<RoomsFailure, KtList<Room>>,
+    ));
+  }
+}
+
+/// @nodoc
+class _$_RoomsReceived implements _RoomsReceived {
+  const _$_RoomsReceived(this.failureOrRooms);
+
+  @override
+  final Either<RoomsFailure, KtList<Room>> failureOrRooms;
+
+  @override
+  String toString() {
+    return 'ActiveRoomsEvent.roomsReceived(failureOrRooms: $failureOrRooms)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _RoomsReceived &&
+            (identical(other.failureOrRooms, failureOrRooms) ||
+                const DeepCollectionEquality()
+                    .equals(other.failureOrRooms, failureOrRooms)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(failureOrRooms);
+
+  @JsonKey(ignore: true)
+  @override
+  _$RoomsReceivedCopyWith<_RoomsReceived> get copyWith =>
+      __$RoomsReceivedCopyWithImpl<_RoomsReceived>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() opened,
+    required TResult Function(Either<RoomsFailure, KtList<Room>> failureOrRooms)
+        roomsReceived,
+  }) {
+    return roomsReceived(failureOrRooms);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? opened,
+    TResult Function(Either<RoomsFailure, KtList<Room>> failureOrRooms)?
+        roomsReceived,
+    required TResult orElse(),
+  }) {
+    if (roomsReceived != null) {
+      return roomsReceived(failureOrRooms);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Opened value) opened,
+    required TResult Function(_RoomsReceived value) roomsReceived,
+  }) {
+    return roomsReceived(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Opened value)? opened,
+    TResult Function(_RoomsReceived value)? roomsReceived,
+    required TResult orElse(),
+  }) {
+    if (roomsReceived != null) {
+      return roomsReceived(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RoomsReceived implements ActiveRoomsEvent {
+  const factory _RoomsReceived(
+      Either<RoomsFailure, KtList<Room>> failureOrRooms) = _$_RoomsReceived;
+
+  Either<RoomsFailure, KtList<Room>> get failureOrRooms =>
+      throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  _$RoomsReceivedCopyWith<_RoomsReceived> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 class _$ActiveRoomsStateTearOff {
   const _$ActiveRoomsStateTearOff();
 
@@ -531,278 +810,5 @@ abstract class _LoadFailure implements ActiveRoomsState {
   RoomsFailure get failure => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$LoadFailureCopyWith<_LoadFailure> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-class _$ActiveRoomsEventTearOff {
-  const _$ActiveRoomsEventTearOff();
-
-  _Opened opened() {
-    return const _Opened();
-  }
-
-  _RoomsReceived roomsReceived(
-      Either<RoomsFailure, KtList<Room>> failureOrRooms) {
-    return _RoomsReceived(
-      failureOrRooms,
-    );
-  }
-}
-
-/// @nodoc
-const $ActiveRoomsEvent = _$ActiveRoomsEventTearOff();
-
-/// @nodoc
-mixin _$ActiveRoomsEvent {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() opened,
-    required TResult Function(Either<RoomsFailure, KtList<Room>> failureOrRooms)
-        roomsReceived,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? opened,
-    TResult Function(Either<RoomsFailure, KtList<Room>> failureOrRooms)?
-        roomsReceived,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Opened value) opened,
-    required TResult Function(_RoomsReceived value) roomsReceived,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Opened value)? opened,
-    TResult Function(_RoomsReceived value)? roomsReceived,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $ActiveRoomsEventCopyWith<$Res> {
-  factory $ActiveRoomsEventCopyWith(
-          ActiveRoomsEvent value, $Res Function(ActiveRoomsEvent) then) =
-      _$ActiveRoomsEventCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class _$ActiveRoomsEventCopyWithImpl<$Res>
-    implements $ActiveRoomsEventCopyWith<$Res> {
-  _$ActiveRoomsEventCopyWithImpl(this._value, this._then);
-
-  final ActiveRoomsEvent _value;
-  // ignore: unused_field
-  final $Res Function(ActiveRoomsEvent) _then;
-}
-
-/// @nodoc
-abstract class _$OpenedCopyWith<$Res> {
-  factory _$OpenedCopyWith(_Opened value, $Res Function(_Opened) then) =
-      __$OpenedCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$OpenedCopyWithImpl<$Res> extends _$ActiveRoomsEventCopyWithImpl<$Res>
-    implements _$OpenedCopyWith<$Res> {
-  __$OpenedCopyWithImpl(_Opened _value, $Res Function(_Opened) _then)
-      : super(_value, (v) => _then(v as _Opened));
-
-  @override
-  _Opened get _value => super._value as _Opened;
-}
-
-/// @nodoc
-class _$_Opened implements _Opened {
-  const _$_Opened();
-
-  @override
-  String toString() {
-    return 'ActiveRoomsEvent.opened()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _Opened);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() opened,
-    required TResult Function(Either<RoomsFailure, KtList<Room>> failureOrRooms)
-        roomsReceived,
-  }) {
-    return opened();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? opened,
-    TResult Function(Either<RoomsFailure, KtList<Room>> failureOrRooms)?
-        roomsReceived,
-    required TResult orElse(),
-  }) {
-    if (opened != null) {
-      return opened();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Opened value) opened,
-    required TResult Function(_RoomsReceived value) roomsReceived,
-  }) {
-    return opened(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Opened value)? opened,
-    TResult Function(_RoomsReceived value)? roomsReceived,
-    required TResult orElse(),
-  }) {
-    if (opened != null) {
-      return opened(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Opened implements ActiveRoomsEvent {
-  const factory _Opened() = _$_Opened;
-}
-
-/// @nodoc
-abstract class _$RoomsReceivedCopyWith<$Res> {
-  factory _$RoomsReceivedCopyWith(
-          _RoomsReceived value, $Res Function(_RoomsReceived) then) =
-      __$RoomsReceivedCopyWithImpl<$Res>;
-  $Res call({Either<RoomsFailure, KtList<Room>> failureOrRooms});
-}
-
-/// @nodoc
-class __$RoomsReceivedCopyWithImpl<$Res>
-    extends _$ActiveRoomsEventCopyWithImpl<$Res>
-    implements _$RoomsReceivedCopyWith<$Res> {
-  __$RoomsReceivedCopyWithImpl(
-      _RoomsReceived _value, $Res Function(_RoomsReceived) _then)
-      : super(_value, (v) => _then(v as _RoomsReceived));
-
-  @override
-  _RoomsReceived get _value => super._value as _RoomsReceived;
-
-  @override
-  $Res call({
-    Object? failureOrRooms = freezed,
-  }) {
-    return _then(_RoomsReceived(
-      failureOrRooms == freezed
-          ? _value.failureOrRooms
-          : failureOrRooms // ignore: cast_nullable_to_non_nullable
-              as Either<RoomsFailure, KtList<Room>>,
-    ));
-  }
-}
-
-/// @nodoc
-class _$_RoomsReceived implements _RoomsReceived {
-  const _$_RoomsReceived(this.failureOrRooms);
-
-  @override
-  final Either<RoomsFailure, KtList<Room>> failureOrRooms;
-
-  @override
-  String toString() {
-    return 'ActiveRoomsEvent.roomsReceived(failureOrRooms: $failureOrRooms)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _RoomsReceived &&
-            (identical(other.failureOrRooms, failureOrRooms) ||
-                const DeepCollectionEquality()
-                    .equals(other.failureOrRooms, failureOrRooms)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(failureOrRooms);
-
-  @JsonKey(ignore: true)
-  @override
-  _$RoomsReceivedCopyWith<_RoomsReceived> get copyWith =>
-      __$RoomsReceivedCopyWithImpl<_RoomsReceived>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() opened,
-    required TResult Function(Either<RoomsFailure, KtList<Room>> failureOrRooms)
-        roomsReceived,
-  }) {
-    return roomsReceived(failureOrRooms);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? opened,
-    TResult Function(Either<RoomsFailure, KtList<Room>> failureOrRooms)?
-        roomsReceived,
-    required TResult orElse(),
-  }) {
-    if (roomsReceived != null) {
-      return roomsReceived(failureOrRooms);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Opened value) opened,
-    required TResult Function(_RoomsReceived value) roomsReceived,
-  }) {
-    return roomsReceived(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Opened value)? opened,
-    TResult Function(_RoomsReceived value)? roomsReceived,
-    required TResult orElse(),
-  }) {
-    if (roomsReceived != null) {
-      return roomsReceived(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _RoomsReceived implements ActiveRoomsEvent {
-  const factory _RoomsReceived(
-      Either<RoomsFailure, KtList<Room>> failureOrRooms) = _$_RoomsReceived;
-
-  Either<RoomsFailure, KtList<Room>> get failureOrRooms =>
-      throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  _$RoomsReceivedCopyWith<_RoomsReceived> get copyWith =>
       throw _privateConstructorUsedError;
 }

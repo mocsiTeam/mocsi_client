@@ -80,6 +80,21 @@ class I18n {
 
   static String get calendar => _getText('calendar');
 
+  static String get toMainMenu => _getText('toMainMenu');
+
+  static String get conferenceOnAir => _getText('conferenceOnAir');
+
+  static String get conferenceEnded => _getText('conferenceEnded');
+
+  static String get conferenceLoading => _getText('conferenceLoading');
+
+  static String get couldNotEnterConference =>
+      _getText('couldNotEnterConference');
+
+  static String get join => _getText('join');
+
+  static String get signOut => _getText('signOut');
+
   static late Map<String, String> _localizedValues;
 
   static const _enValues = {
@@ -120,6 +135,13 @@ class I18n {
     'roomCreated': 'New room has been created',
     'profile': 'Profile',
     'calendar': 'Calendar',
+    'toMainMenu': 'To main menu',
+    'conferenceOnAir': 'Conference is on air',
+    'conferenceEnded': 'Conference has ended',
+    'conferenceLoading': 'Conference is loading...',
+    'couldNotEnterConference': 'Could not enter a conference',
+    'join': 'Join',
+    'signOut': 'Sign out',
   };
 
   static const _ruValues = {
@@ -160,6 +182,13 @@ class I18n {
     'roomCreated': 'Создана новая комната',
     'profile': 'Профиль',
     'calendar': 'Календарь',
+    'toMainMenu': 'Возврат в главное меню',
+    'conferenceOnAir': 'Конференция идёт',
+    'conferenceEnded': 'Конференция закончилась',
+    'conferenceLoading': 'Конференция прогружается...',
+    'couldNotEnterConference': 'Неудачная попытка входа в конференцию',
+    'join': 'Присоединиться',
+    'signOut': 'Выйти из аккаунта',
   };
 
   static const _allValues = {

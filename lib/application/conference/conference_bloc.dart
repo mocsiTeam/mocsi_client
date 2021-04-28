@@ -27,37 +27,41 @@ class ConferenceBloc extends Bloc<ConferenceEvent, ConferenceState> {
 
   @override
   Stream<ConferenceState> mapEventToState(ConferenceEvent event) async* {
-    yield* event.map(
-      conferenceOpened: (state) async* {
-        _logger.i(state);
+    yield* event.map(conferenceOpened: (e) async* {
+      yield const ConferenceState.conferenceLoading();
+      _logger.i(e);
 
-        final failureOrToken = await _authFacade.signIn();
-        yield await failureOrToken
+      final failureOrToken = await _authFacade.signIn();
+      yield await failureOrToken
+          .fold((failure) => const ConferenceState.errorWhileJoining(),
+              (token) async {
+        final failureOrUser = await _conferenceFacade.getConferenceUser(token);
+        return await failureOrUser
             .fold((failure) => const ConferenceState.errorWhileJoining(),
-                (token) async {
-          final failureOrUser =
-              await _conferenceFacade.getConferenceUser(token);
-          return await failureOrUser
-              .fold((failure) => const ConferenceState.errorWhileJoining(),
-                  (user) async {
-            try {
-              final options = JitsiMeetingOptions(
-                room: state.room.uniqueName.getOrCrash(),
-              )
-                ..serverURL = kJitsiApi
-                ..userDisplayName =
-                    '${user.firstName.getOrCrash()} ${user.lastName.getOrCrash()}'
-                ..userEmail = user.emailAddress.getOrCrash()
-                ..subject = state.room.name.getOrCrash();
-              await JitsiMeet.joinMeeting(options);
-              return const ConferenceState.conferenceJoined();
-            } on Exception catch (e) {
-              _logger.e(e.toString());
-              return const ConferenceState.errorWhileJoining();
-            }
-          });
+                (user) async {
+          try {
+            final options = JitsiMeetingOptions(
+              room: e.room.uniqueName.getOrCrash(),
+            )
+              ..serverURL = kJitsiApi
+              ..userDisplayName =
+                  '${user.firstName.getOrCrash()} ${user.lastName.getOrCrash()}'
+              ..userEmail = user.emailAddress.getOrCrash()
+              ..subject = e.room.name.getOrCrash();
+            await JitsiMeet.joinMeeting(options, listener:
+                JitsiMeetingListener(onConferenceTerminated: (message) {
+              _logger.i(message);
+              add(const ConferenceEvent.conferenceLeft());
+            }));
+            return ConferenceState.conferenceJoined(e.room);
+          } on Exception catch (e) {
+            _logger.e(e.toString());
+            return const ConferenceState.errorWhileJoining();
+          }
         });
-      },
-    );
+      });
+    }, conferenceLeft: (e) async* {
+      yield const ConferenceState.conferenceTerminated();
+    });
   }
 }

@@ -35,3 +35,10 @@ creatingNewRoom;Creating new room;Создание новой комнаты
 roomCreated;New room has been created;Создана новая комната
 profile;Profile;Профиль
 calendar;Calendar;Календарь
+toMainMenu;To main menu;Возврат в главное меню
+conferenceOnAir;Conference is on air;Конференция идёт
+conferenceEnded;Conference has ended;Конференция закончилась
+conferenceLoading;Conference is loading...;Конференция прогружается...
+couldNotEnterConference;Could not enter a conference;Неудачная попытка входа в конференцию
+join;Join;Присоединиться
+signOut;Sign out;Выйти из аккаунта

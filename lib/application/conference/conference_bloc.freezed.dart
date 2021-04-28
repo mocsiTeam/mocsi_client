@@ -21,6 +21,10 @@ class _$ConferenceEventTearOff {
       room,
     );
   }
+
+  ConferenceLeft conferenceLeft() {
+    return const ConferenceLeft();
+  }
 }
 
 /// @nodoc
@@ -28,33 +32,31 @@ const $ConferenceEvent = _$ConferenceEventTearOff();
 
 /// @nodoc
 mixin _$ConferenceEvent {
-  Room get room => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Room room) conferenceOpened,
+    required TResult Function() conferenceLeft,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Room room)? conferenceOpened,
+    TResult Function()? conferenceLeft,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ConferenceOpened value) conferenceOpened,
+    required TResult Function(ConferenceLeft value) conferenceLeft,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ConferenceOpened value)? conferenceOpened,
+    TResult Function(ConferenceLeft value)? conferenceLeft,
     required TResult orElse(),
   }) =>
-      throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $ConferenceEventCopyWith<ConferenceEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -63,9 +65,6 @@ abstract class $ConferenceEventCopyWith<$Res> {
   factory $ConferenceEventCopyWith(
           ConferenceEvent value, $Res Function(ConferenceEvent) then) =
       _$ConferenceEventCopyWithImpl<$Res>;
-  $Res call({Room room});
-
-  $RoomCopyWith<$Res> get room;
 }
 
 /// @nodoc
@@ -76,37 +75,16 @@ class _$ConferenceEventCopyWithImpl<$Res>
   final ConferenceEvent _value;
   // ignore: unused_field
   final $Res Function(ConferenceEvent) _then;
-
-  @override
-  $Res call({
-    Object? room = freezed,
-  }) {
-    return _then(_value.copyWith(
-      room: room == freezed
-          ? _value.room
-          : room // ignore: cast_nullable_to_non_nullable
-              as Room,
-    ));
-  }
-
-  @override
-  $RoomCopyWith<$Res> get room {
-    return $RoomCopyWith<$Res>(_value.room, (value) {
-      return _then(_value.copyWith(room: value));
-    });
-  }
 }
 
 /// @nodoc
-abstract class $ConferenceOpenedCopyWith<$Res>
-    implements $ConferenceEventCopyWith<$Res> {
+abstract class $ConferenceOpenedCopyWith<$Res> {
   factory $ConferenceOpenedCopyWith(
           ConferenceOpened value, $Res Function(ConferenceOpened) then) =
       _$ConferenceOpenedCopyWithImpl<$Res>;
-  @override
+
   $Res call({Room room});
 
-  @override
   $RoomCopyWith<$Res> get room;
 }
 
@@ -131,6 +109,13 @@ class _$ConferenceOpenedCopyWithImpl<$Res>
           : room // ignore: cast_nullable_to_non_nullable
               as Room,
     ));
+  }
+
+  @override
+  $RoomCopyWith<$Res> get room {
+    return $RoomCopyWith<$Res>(_value.room, (value) {
+      return _then(_value.copyWith(room: value));
+    });
   }
 }
 
@@ -167,6 +152,7 @@ class _$ConferenceOpened implements ConferenceOpened {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Room room) conferenceOpened,
+    required TResult Function() conferenceLeft,
   }) {
     return conferenceOpened(room);
   }
@@ -175,6 +161,7 @@ class _$ConferenceOpened implements ConferenceOpened {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Room room)? conferenceOpened,
+    TResult Function()? conferenceLeft,
     required TResult orElse(),
   }) {
     if (conferenceOpened != null) {
@@ -187,6 +174,7 @@ class _$ConferenceOpened implements ConferenceOpened {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ConferenceOpened value) conferenceOpened,
+    required TResult Function(ConferenceLeft value) conferenceLeft,
   }) {
     return conferenceOpened(this);
   }
@@ -195,6 +183,7 @@ class _$ConferenceOpened implements ConferenceOpened {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ConferenceOpened value)? conferenceOpened,
+    TResult Function(ConferenceLeft value)? conferenceLeft,
     required TResult orElse(),
   }) {
     if (conferenceOpened != null) {
@@ -207,12 +196,96 @@ class _$ConferenceOpened implements ConferenceOpened {
 abstract class ConferenceOpened implements ConferenceEvent {
   const factory ConferenceOpened(Room room) = _$ConferenceOpened;
 
-  @override
   Room get room => throw _privateConstructorUsedError;
-  @override
+
   @JsonKey(ignore: true)
   $ConferenceOpenedCopyWith<ConferenceOpened> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ConferenceLeftCopyWith<$Res> {
+  factory $ConferenceLeftCopyWith(
+          ConferenceLeft value, $Res Function(ConferenceLeft) then) =
+      _$ConferenceLeftCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$ConferenceLeftCopyWithImpl<$Res>
+    extends _$ConferenceEventCopyWithImpl<$Res>
+    implements $ConferenceLeftCopyWith<$Res> {
+  _$ConferenceLeftCopyWithImpl(
+      ConferenceLeft _value, $Res Function(ConferenceLeft) _then)
+      : super(_value, (v) => _then(v as ConferenceLeft));
+
+  @override
+  ConferenceLeft get _value => super._value as ConferenceLeft;
+}
+
+/// @nodoc
+class _$ConferenceLeft implements ConferenceLeft {
+  const _$ConferenceLeft();
+
+  @override
+  String toString() {
+    return 'ConferenceEvent.conferenceLeft()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is ConferenceLeft);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Room room) conferenceOpened,
+    required TResult Function() conferenceLeft,
+  }) {
+    return conferenceLeft();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Room room)? conferenceOpened,
+    TResult Function()? conferenceLeft,
+    required TResult orElse(),
+  }) {
+    if (conferenceLeft != null) {
+      return conferenceLeft();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ConferenceOpened value) conferenceOpened,
+    required TResult Function(ConferenceLeft value) conferenceLeft,
+  }) {
+    return conferenceLeft(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ConferenceOpened value)? conferenceOpened,
+    TResult Function(ConferenceLeft value)? conferenceLeft,
+    required TResult orElse(),
+  }) {
+    if (conferenceLeft != null) {
+      return conferenceLeft(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ConferenceLeft implements ConferenceEvent {
+  const factory ConferenceLeft() = _$ConferenceLeft;
 }
 
 /// @nodoc
@@ -223,12 +296,22 @@ class _$ConferenceStateTearOff {
     return const Initial();
   }
 
-  ConferenceJoined conferenceJoined() {
-    return const ConferenceJoined();
+  ConferenceJoined conferenceJoined(Room room) {
+    return ConferenceJoined(
+      room,
+    );
   }
 
   ErrorWhileJoining errorWhileJoining() {
     return const ErrorWhileJoining();
+  }
+
+  ConferenceLoading conferenceLoading() {
+    return const ConferenceLoading();
+  }
+
+  ConferenceTerminated conferenceTerminated() {
+    return const ConferenceTerminated();
   }
 }
 
@@ -240,15 +323,19 @@ mixin _$ConferenceState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() conferenceJoined,
+    required TResult Function(Room room) conferenceJoined,
     required TResult Function() errorWhileJoining,
+    required TResult Function() conferenceLoading,
+    required TResult Function() conferenceTerminated,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? conferenceJoined,
+    TResult Function(Room room)? conferenceJoined,
     TResult Function()? errorWhileJoining,
+    TResult Function()? conferenceLoading,
+    TResult Function()? conferenceTerminated,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -257,6 +344,8 @@ mixin _$ConferenceState {
     required TResult Function(Initial value) initial,
     required TResult Function(ConferenceJoined value) conferenceJoined,
     required TResult Function(ErrorWhileJoining value) errorWhileJoining,
+    required TResult Function(ConferenceLoading value) conferenceLoading,
+    required TResult Function(ConferenceTerminated value) conferenceTerminated,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -264,6 +353,8 @@ mixin _$ConferenceState {
     TResult Function(Initial value)? initial,
     TResult Function(ConferenceJoined value)? conferenceJoined,
     TResult Function(ErrorWhileJoining value)? errorWhileJoining,
+    TResult Function(ConferenceLoading value)? conferenceLoading,
+    TResult Function(ConferenceTerminated value)? conferenceTerminated,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -323,8 +414,10 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() conferenceJoined,
+    required TResult Function(Room room) conferenceJoined,
     required TResult Function() errorWhileJoining,
+    required TResult Function() conferenceLoading,
+    required TResult Function() conferenceTerminated,
   }) {
     return initial();
   }
@@ -333,8 +426,10 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? conferenceJoined,
+    TResult Function(Room room)? conferenceJoined,
     TResult Function()? errorWhileJoining,
+    TResult Function()? conferenceLoading,
+    TResult Function()? conferenceTerminated,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -349,6 +444,8 @@ class _$Initial implements Initial {
     required TResult Function(Initial value) initial,
     required TResult Function(ConferenceJoined value) conferenceJoined,
     required TResult Function(ErrorWhileJoining value) errorWhileJoining,
+    required TResult Function(ConferenceLoading value) conferenceLoading,
+    required TResult Function(ConferenceTerminated value) conferenceTerminated,
   }) {
     return initial(this);
   }
@@ -359,6 +456,8 @@ class _$Initial implements Initial {
     TResult Function(Initial value)? initial,
     TResult Function(ConferenceJoined value)? conferenceJoined,
     TResult Function(ErrorWhileJoining value)? errorWhileJoining,
+    TResult Function(ConferenceLoading value)? conferenceLoading,
+    TResult Function(ConferenceTerminated value)? conferenceTerminated,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -377,6 +476,10 @@ abstract class $ConferenceJoinedCopyWith<$Res> {
   factory $ConferenceJoinedCopyWith(
           ConferenceJoined value, $Res Function(ConferenceJoined) then) =
       _$ConferenceJoinedCopyWithImpl<$Res>;
+
+  $Res call({Room room});
+
+  $RoomCopyWith<$Res> get room;
 }
 
 /// @nodoc
@@ -389,45 +492,80 @@ class _$ConferenceJoinedCopyWithImpl<$Res>
 
   @override
   ConferenceJoined get _value => super._value as ConferenceJoined;
+
+  @override
+  $Res call({
+    Object? room = freezed,
+  }) {
+    return _then(ConferenceJoined(
+      room == freezed
+          ? _value.room
+          : room // ignore: cast_nullable_to_non_nullable
+              as Room,
+    ));
+  }
+
+  @override
+  $RoomCopyWith<$Res> get room {
+    return $RoomCopyWith<$Res>(_value.room, (value) {
+      return _then(_value.copyWith(room: value));
+    });
+  }
 }
 
 /// @nodoc
 class _$ConferenceJoined implements ConferenceJoined {
-  const _$ConferenceJoined();
+  const _$ConferenceJoined(this.room);
+
+  @override
+  final Room room;
 
   @override
   String toString() {
-    return 'ConferenceState.conferenceJoined()';
+    return 'ConferenceState.conferenceJoined(room: $room)';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is ConferenceJoined);
+    return identical(this, other) ||
+        (other is ConferenceJoined &&
+            (identical(other.room, room) ||
+                const DeepCollectionEquality().equals(other.room, room)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(room);
+
+  @JsonKey(ignore: true)
+  @override
+  $ConferenceJoinedCopyWith<ConferenceJoined> get copyWith =>
+      _$ConferenceJoinedCopyWithImpl<ConferenceJoined>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() conferenceJoined,
+    required TResult Function(Room room) conferenceJoined,
     required TResult Function() errorWhileJoining,
+    required TResult Function() conferenceLoading,
+    required TResult Function() conferenceTerminated,
   }) {
-    return conferenceJoined();
+    return conferenceJoined(room);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? conferenceJoined,
+    TResult Function(Room room)? conferenceJoined,
     TResult Function()? errorWhileJoining,
+    TResult Function()? conferenceLoading,
+    TResult Function()? conferenceTerminated,
     required TResult orElse(),
   }) {
     if (conferenceJoined != null) {
-      return conferenceJoined();
+      return conferenceJoined(room);
     }
     return orElse();
   }
@@ -438,6 +576,8 @@ class _$ConferenceJoined implements ConferenceJoined {
     required TResult Function(Initial value) initial,
     required TResult Function(ConferenceJoined value) conferenceJoined,
     required TResult Function(ErrorWhileJoining value) errorWhileJoining,
+    required TResult Function(ConferenceLoading value) conferenceLoading,
+    required TResult Function(ConferenceTerminated value) conferenceTerminated,
   }) {
     return conferenceJoined(this);
   }
@@ -448,6 +588,8 @@ class _$ConferenceJoined implements ConferenceJoined {
     TResult Function(Initial value)? initial,
     TResult Function(ConferenceJoined value)? conferenceJoined,
     TResult Function(ErrorWhileJoining value)? errorWhileJoining,
+    TResult Function(ConferenceLoading value)? conferenceLoading,
+    TResult Function(ConferenceTerminated value)? conferenceTerminated,
     required TResult orElse(),
   }) {
     if (conferenceJoined != null) {
@@ -458,7 +600,13 @@ class _$ConferenceJoined implements ConferenceJoined {
 }
 
 abstract class ConferenceJoined implements ConferenceState {
-  const factory ConferenceJoined() = _$ConferenceJoined;
+  const factory ConferenceJoined(Room room) = _$ConferenceJoined;
+
+  Room get room => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $ConferenceJoinedCopyWith<ConferenceJoined> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -501,8 +649,10 @@ class _$ErrorWhileJoining implements ErrorWhileJoining {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() conferenceJoined,
+    required TResult Function(Room room) conferenceJoined,
     required TResult Function() errorWhileJoining,
+    required TResult Function() conferenceLoading,
+    required TResult Function() conferenceTerminated,
   }) {
     return errorWhileJoining();
   }
@@ -511,8 +661,10 @@ class _$ErrorWhileJoining implements ErrorWhileJoining {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? conferenceJoined,
+    TResult Function(Room room)? conferenceJoined,
     TResult Function()? errorWhileJoining,
+    TResult Function()? conferenceLoading,
+    TResult Function()? conferenceTerminated,
     required TResult orElse(),
   }) {
     if (errorWhileJoining != null) {
@@ -527,6 +679,8 @@ class _$ErrorWhileJoining implements ErrorWhileJoining {
     required TResult Function(Initial value) initial,
     required TResult Function(ConferenceJoined value) conferenceJoined,
     required TResult Function(ErrorWhileJoining value) errorWhileJoining,
+    required TResult Function(ConferenceLoading value) conferenceLoading,
+    required TResult Function(ConferenceTerminated value) conferenceTerminated,
   }) {
     return errorWhileJoining(this);
   }
@@ -537,6 +691,8 @@ class _$ErrorWhileJoining implements ErrorWhileJoining {
     TResult Function(Initial value)? initial,
     TResult Function(ConferenceJoined value)? conferenceJoined,
     TResult Function(ErrorWhileJoining value)? errorWhileJoining,
+    TResult Function(ConferenceLoading value)? conferenceLoading,
+    TResult Function(ConferenceTerminated value)? conferenceTerminated,
     required TResult orElse(),
   }) {
     if (errorWhileJoining != null) {
@@ -548,4 +704,198 @@ class _$ErrorWhileJoining implements ErrorWhileJoining {
 
 abstract class ErrorWhileJoining implements ConferenceState {
   const factory ErrorWhileJoining() = _$ErrorWhileJoining;
+}
+
+/// @nodoc
+abstract class $ConferenceLoadingCopyWith<$Res> {
+  factory $ConferenceLoadingCopyWith(
+          ConferenceLoading value, $Res Function(ConferenceLoading) then) =
+      _$ConferenceLoadingCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$ConferenceLoadingCopyWithImpl<$Res>
+    extends _$ConferenceStateCopyWithImpl<$Res>
+    implements $ConferenceLoadingCopyWith<$Res> {
+  _$ConferenceLoadingCopyWithImpl(
+      ConferenceLoading _value, $Res Function(ConferenceLoading) _then)
+      : super(_value, (v) => _then(v as ConferenceLoading));
+
+  @override
+  ConferenceLoading get _value => super._value as ConferenceLoading;
+}
+
+/// @nodoc
+class _$ConferenceLoading implements ConferenceLoading {
+  const _$ConferenceLoading();
+
+  @override
+  String toString() {
+    return 'ConferenceState.conferenceLoading()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is ConferenceLoading);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(Room room) conferenceJoined,
+    required TResult Function() errorWhileJoining,
+    required TResult Function() conferenceLoading,
+    required TResult Function() conferenceTerminated,
+  }) {
+    return conferenceLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(Room room)? conferenceJoined,
+    TResult Function()? errorWhileJoining,
+    TResult Function()? conferenceLoading,
+    TResult Function()? conferenceTerminated,
+    required TResult orElse(),
+  }) {
+    if (conferenceLoading != null) {
+      return conferenceLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(ConferenceJoined value) conferenceJoined,
+    required TResult Function(ErrorWhileJoining value) errorWhileJoining,
+    required TResult Function(ConferenceLoading value) conferenceLoading,
+    required TResult Function(ConferenceTerminated value) conferenceTerminated,
+  }) {
+    return conferenceLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(ConferenceJoined value)? conferenceJoined,
+    TResult Function(ErrorWhileJoining value)? errorWhileJoining,
+    TResult Function(ConferenceLoading value)? conferenceLoading,
+    TResult Function(ConferenceTerminated value)? conferenceTerminated,
+    required TResult orElse(),
+  }) {
+    if (conferenceLoading != null) {
+      return conferenceLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ConferenceLoading implements ConferenceState {
+  const factory ConferenceLoading() = _$ConferenceLoading;
+}
+
+/// @nodoc
+abstract class $ConferenceTerminatedCopyWith<$Res> {
+  factory $ConferenceTerminatedCopyWith(ConferenceTerminated value,
+          $Res Function(ConferenceTerminated) then) =
+      _$ConferenceTerminatedCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$ConferenceTerminatedCopyWithImpl<$Res>
+    extends _$ConferenceStateCopyWithImpl<$Res>
+    implements $ConferenceTerminatedCopyWith<$Res> {
+  _$ConferenceTerminatedCopyWithImpl(
+      ConferenceTerminated _value, $Res Function(ConferenceTerminated) _then)
+      : super(_value, (v) => _then(v as ConferenceTerminated));
+
+  @override
+  ConferenceTerminated get _value => super._value as ConferenceTerminated;
+}
+
+/// @nodoc
+class _$ConferenceTerminated implements ConferenceTerminated {
+  const _$ConferenceTerminated();
+
+  @override
+  String toString() {
+    return 'ConferenceState.conferenceTerminated()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is ConferenceTerminated);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(Room room) conferenceJoined,
+    required TResult Function() errorWhileJoining,
+    required TResult Function() conferenceLoading,
+    required TResult Function() conferenceTerminated,
+  }) {
+    return conferenceTerminated();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(Room room)? conferenceJoined,
+    TResult Function()? errorWhileJoining,
+    TResult Function()? conferenceLoading,
+    TResult Function()? conferenceTerminated,
+    required TResult orElse(),
+  }) {
+    if (conferenceTerminated != null) {
+      return conferenceTerminated();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(ConferenceJoined value) conferenceJoined,
+    required TResult Function(ErrorWhileJoining value) errorWhileJoining,
+    required TResult Function(ConferenceLoading value) conferenceLoading,
+    required TResult Function(ConferenceTerminated value) conferenceTerminated,
+  }) {
+    return conferenceTerminated(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(ConferenceJoined value)? conferenceJoined,
+    TResult Function(ErrorWhileJoining value)? errorWhileJoining,
+    TResult Function(ConferenceLoading value)? conferenceLoading,
+    TResult Function(ConferenceTerminated value)? conferenceTerminated,
+    required TResult orElse(),
+  }) {
+    if (conferenceTerminated != null) {
+      return conferenceTerminated(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ConferenceTerminated implements ConferenceState {
+  const factory ConferenceTerminated() = _$ConferenceTerminated;
 }
